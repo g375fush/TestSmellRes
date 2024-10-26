@@ -14,9 +14,11 @@ def main():
     ただし，あらかじめクローンされているリポジトリを対象とする．
     """
     this_file_name = Path(__file__).stem
-    for repo_prefix in Path('../repo').resolve(strict=True).glob('*'):
+    target_list = list(Path('../repo').resolve(strict=True).glob('*'))
+    target_list.sort()
+    for repo_prefix in target_list:
         result_dir = Path(f'../result/{this_file_name}/{repo_prefix}')
-        result_dir.mkdir(exist_ok=True)
+        result_dir.mkdir(exist_ok=True, parents=True)
         pynose_executor = PyNoseExecutor(runner_path=runner_path,
                                          result_dir=result_dir,
                                          repo_prefix=repo_prefix)
