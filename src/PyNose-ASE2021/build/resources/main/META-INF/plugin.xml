@@ -1,0 +1,16 @@
+<idea-plugin>
+  <version>1.0-SNAPSHOT</version>
+  <change-notes>Initial release.</change-notes>
+  <idea-version since-build="211.7142" until-build="211.*"/>
+  <id>pynose.PyNose</id>
+  <name>PyNose</name>
+  <vendor>PyNose</vendor>
+  <description>
+    This is a test smell detector for Python.
+    </description>
+  <depends>com.intellij.modules.python</depends>
+  <extensions defaultExtensionNs="com.intellij">
+    <toolWindow factoryClass="pynose.ui.PyNoseGUIFactory" id="PyNose" anchor="right" secondary="true" icon="AllIcons.Json.Object"/>
+  </extensions>
+  <actions/>
+</idea-plugin>

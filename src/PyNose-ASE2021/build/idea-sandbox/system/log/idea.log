@@ -1,0 +1,467 @@
+2024-05-04 18:14:59,814 [      0]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE STARTED ------------------------------------------------------ 
+2024-05-04 18:15:00,161 [    347]   INFO -        #com.intellij.idea.Main - IDE: PyCharm (build #PC-211.7142.13, 21 Apr 2021 17:35) 
+2024-05-04 18:15:00,177 [    363]   INFO -        #com.intellij.idea.Main - OS: Linux (6.5.0-28-generic, amd64) 
+2024-05-04 18:15:00,399 [    585]   INFO -        #com.intellij.idea.Main - JRE: 11.0.10+9-b1341.41 (JetBrains s.r.o.) 
+2024-05-04 18:15:00,400 [    586]   INFO -        #com.intellij.idea.Main - JVM: 11.0.10+9-b1341.41 (OpenJDK 64-Bit Server VM) 
+2024-05-04 18:15:00,418 [    604]   INFO -        #com.intellij.idea.Main - JVM Args: -Didea.auto.reload.plugins=true -Didea.classpath.index.enabled=false -Didea.config.path=/home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/config -Didea.is.internal=true -Didea.platform.prefix=PyCharmCore -Didea.plugins.path=/home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/plugins -Didea.required.plugins.id=pynose.PyNose -Didea.system.path=/home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/system -Dsun.awt.disablegrab=true -Xms256m -Xmx512m -Dfile.encoding=UTF-8 -Duser.country=JP -Duser.language=ja -Duser.variant -ea 
+2024-05-04 18:15:00,444 [    630]   INFO -        #com.intellij.idea.Main - library path: /usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib 
+2024-05-04 18:15:00,445 [    631]   INFO -        #com.intellij.idea.Main - boot library path: /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains/jbre/jbr_jcef-11_0_10-linux-x64-b1341.41/jbr/lib 
+2024-05-04 18:15:00,720 [    906]   INFO -        #com.intellij.idea.Main - locale=ja_JP JNU=UTF-8 file.encoding=UTF-8
+  idea.config.path=/home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/config
+  idea.system.path=/home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/system
+  idea.plugins.path=/home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/plugins
+  idea.log.path=/home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/system/log 
+2024-05-04 18:15:01,770 [   1956]   INFO -        #com.intellij.idea.Main - JNA library (64-bit) loaded in 1045 ms 
+2024-05-04 18:15:01,833 [   2019]   WARN - llij.ide.plugins.PluginManager - Resource bundle redefinition for plugin 'com.jetbrains.pycharm.community.customization'. Old value: messages.ActionsBundle, new value: messages.PyBundle 
+2024-05-04 18:15:04,119 [   4305]   INFO - ntellij.idea.ApplicationLoader - CPU cores: 16; ForkJoinPool.commonPool: java.util.concurrent.ForkJoinPool@676a5fd3[Running, parallelism = 15, size = 1, active = 0, running = 0, steals = 1, tasks = 0, submissions = 0]; factory: com.intellij.concurrency.IdeaForkJoinWorkerThreadFactory@6e351c47 
+2024-05-04 18:15:04,238 [   4424]   INFO - llij.ide.plugins.PluginManager - Loaded bundled plugins: IDEA CORE (211.7142.13), com.intellij.platform.images (211.7142.13), Subversion (211.7142.13), Machine Learning Code Completion (211.7142.13), Configuration Script (211.7142.13), Shared Indexes (211.7142.13), Shared Indexes for Python (211.7142.13), Copyright (211.7142.13), macOS Light Theme (211.7142.13), Windows 10 Light Theme (211.7142.13), JetBrains Marketplace (211.7142.13), Properties (211.7142.13), Task Management (211.7142.13), Mercurial (211.7142.13), EditorConfig (211.7142.13), Emoji Picker (211.7142.13), ReStructuredText (211.7142.13), Terminal (211.7142.13), Git (211.7142.13), ChangeReminder (211.7142.13), GitHub (211.7142.13), Code With Me (211.7142.13), Shell Script (211.7142.13), TextMate Bundles (211.7142.13), YAML (211.7142.13), Settings Repository (211.7142.13), IDE Features Trainer (211.7142.13), IntelliLang (211.7142.13), Markdown (211.7142.13), Grazie (211.7142.13), Python Community Edition (211.7142.13), PyCharm Community Customization (211.7142.13) 
+2024-05-04 18:15:04,240 [   4426]   INFO - llij.ide.plugins.PluginManager - Loaded custom plugins: PyNose (1.0-SNAPSHOT) 
+2024-05-04 18:15:04,285 [   4471]   INFO - ntellij.idea.ApplicationLoader - WM detected: GNOME Shell 
+2024-05-04 18:15:05,631 [   5817]   INFO - m.intellij.util.io.StorageLock - lower=100; upper=492; buffer=10; max=492 
+2024-05-04 18:15:05,921 [   6107]   INFO - intellij.diagnostic.JitWatcher - JIT compilation state checking enabled 
+2024-05-04 18:15:06,104 [   6290]   WARN - j.internal.DebugAttachDetector - Unable to start DebugAttachDetector, please add `--add-exports java.base/jdk.internal.vm=ALL-UNNAMED` to VM options 
+2024-05-04 18:15:07,190 [   7376]   INFO - ication.options.PathMacrosImpl - Loaded path macros: {} 
+2024-05-04 18:15:08,873 [   9059]   INFO - rains.ide.BuiltInServerManager - built-in server started, port 63343 
+2024-05-04 18:15:11,196 [  11382]   INFO - rsistent.PersistentFSConnector - Marking VFS as corrupted: '/home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/system/caches/names.dat' does not exist 
+2024-05-04 18:15:11,197 [  11383]   INFO - til.net.ssl.CertificateManager - Default SSL context initialized 
+2024-05-04 18:15:11,502 [  11688]   INFO - tellij.util.io.FileChannelUtil - uninterruptible FileChannels will be used for indexes 
+2024-05-04 18:15:12,520 [  12706]   INFO - .history.utils.LocalHistoryLog - local history version mismatch (was: 0, expected: 6), rebuilding... 
+2024-05-04 18:15:12,520 [  12706]   INFO - .history.utils.LocalHistoryLog - FS has been rebuild, rebuilding local history... 
+2024-05-04 18:15:13,399 [  13585]   INFO - ntellij.idea.ApplicationLoader - canDisableInputMethod spent 385 ms, found keyboard layouts: [(jp, xkb), ], result==true 
+2024-05-04 18:15:14,430 [  14616]   INFO - pl.local.NativeFileWatcherImpl - Starting file watcher: /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPC/2021.1.1/7e006ed9da260f8a5bf071cb7523e125f956f18a/pycharmPC-2021.1.1/bin/linux/fsnotifier64 
+2024-05-04 18:15:15,476 [  15662]   INFO - pl.local.NativeFileWatcherImpl - Native file watcher is operational. 
+2024-05-04 18:15:16,041 [  16227]   INFO - penapi.application.Experiments - Experimental features enabled for user: wsl.p9.support, wsl.prefer.p9.support, wsl.p9.show.roots.in.file.chooser, wsl.execute.with.wsl.exe, inline.browse.button, linux.native.menu, recent.and.edited.files.together, show.create.new.element.in.popup, search.everywhere.mixed.results, i18n.match.actions, editor.reader.mode, edit.run.configurations.while.dumb, new.large.text.file.viewer, terminal.shell.command.handling 
+2024-05-04 18:15:16,162 [  16348]   INFO - gs.impl.UpdateCheckerComponent - channel: release 
+2024-05-04 18:15:16,858 [  17044]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: com.intellij] 
+2024-05-04 18:15:17,053 [  17239]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: com.intellij] 
+2024-05-04 18:15:17,087 [  17273]   WARN - nSystem.impl.ActionManagerImpl - keymap "NetBeans 6.5" not found [Plugin: com.intellij] 
+2024-05-04 18:15:17,333 [  17519]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: com.intellij] 
+2024-05-04 18:15:19,428 [  19614]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: org.jetbrains.plugins.github] 
+2024-05-04 18:15:20,361 [  20547]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: PythonCore] 
+2024-05-04 18:15:20,538 [  20724]   WARN - nSystem.impl.ActionManagerImpl - keymap "NetBeans 6.5" not found [Plugin: PythonCore] 
+2024-05-04 18:15:23,060 [  23246]   INFO - penapi.wm.impl.GlobalMenuLinux - can't start main loop via JavaFX (will run it manually): com.sun.javafx.application.PlatformImpl 
+2024-05-04 18:15:24,881 [  25067]   INFO - penapi.application.Experiments - Experimental feature 'terminal.shell.command.handling' is now turned OFF 
+2024-05-04 18:15:36,961 [  37147]   WARN - .diagnostic.PerformanceWatcher - UI was frozen for 18130ms, details saved to /home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/system/log/threadDumps-freeze-20240504-181517-PC-211.7142.13-18sec 
+2024-05-04 18:15:37,135 [  37321]   INFO - impl.SharedIndexInfrastructure - Shared index version updated from -1 to 7 
+2024-05-04 18:15:37,362 [  37548]   INFO - impl.SharedIndexInfrastructure - Shared index persistent data has been cleared 
+2024-05-04 18:15:37,575 [  37761]   INFO - impl.SharedIndexMainZipStorage - Shared Indexes Storage is opened: <empty>, chunks: [] 
+2024-05-04 18:15:38,206 [  38392]   WARN - arketplace.MarketplaceRequests - Error reading Marketplace file: url=https://plugins.jetbrains.com/files/brokenPlugins.json file=brokenPlugins.json 
+com.fasterxml.jackson.databind.JsonMappingException: Unexpected end-of-input within/between Object entries
+ at [Source: (BufferedReader); line: 1, column: 8193] (through reference chain: java.util.ArrayList[61])
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:390)
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:361)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:363)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:244)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:322)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4591)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3567)
+	at com.intellij.ide.plugins.marketplace.MarketplaceRequests$getBrokenPlugins$1.invoke(MarketplaceRequests.kt:189)
+	at com.intellij.ide.plugins.marketplace.MarketplaceRequests$getBrokenPlugins$1.invoke(MarketplaceRequests.kt:39)
+	at com.intellij.ide.plugins.marketplace.MarketplaceRequests$readOrUpdateFile$2.process(MarketplaceRequests.kt:282)
+	at com.intellij.util.io.HttpRequests.doProcess(HttpRequests.java:531)
+	at com.intellij.util.io.HttpRequests.process(HttpRequests.java:513)
+	at com.intellij.util.io.HttpRequests$RequestBuilderImpl.connect(HttpRequests.java:332)
+	at com.intellij.ide.plugins.marketplace.MarketplaceRequests.readOrUpdateFile(MarketplaceRequests.kt:262)
+	at com.intellij.ide.plugins.marketplace.MarketplaceRequests.getBrokenPlugins(MarketplaceRequests.kt:184)
+	at com.intellij.openapi.updateSettings.impl.UpdateChecker.getBrokenPlugins(UpdateChecker.kt:333)
+	at com.intellij.openapi.updateSettings.impl.UpdateChecker.checkPluginsUpdate(UpdateChecker.kt:284)
+	at com.intellij.openapi.updateSettings.impl.UpdateChecker.checkPluginsUpdate$default(UpdateChecker.kt:282)
+	at com.intellij.openapi.updateSettings.impl.UpdateChecker.checkPluginsUpdate(UpdateChecker.kt)
+	at com.intellij.ide.plugins.newui.PluginUpdatesService.lambda$calculateUpdates$3(PluginUpdatesService.java:202)
+	at com.intellij.util.concurrency.BoundedTaskExecutor.doRun(BoundedTaskExecutor.java:216)
+	at com.intellij.util.concurrency.BoundedTaskExecutor.access$200(BoundedTaskExecutor.java:27)
+	at com.intellij.util.concurrency.BoundedTaskExecutor$1.execute(BoundedTaskExecutor.java:195)
+	at com.intellij.util.concurrency.BoundedTaskExecutor$1.run(BoundedTaskExecutor.java:187)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:668)
+	at java.base/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:665)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:665)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: com.fasterxml.jackson.core.io.JsonEOFException: Unexpected end-of-input within/between Object entries
+ at [Source: (BufferedReader); line: 1, column: 8193]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportInvalidEOF(ParserMinimalBase.java:662)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._skipColon2(ReaderBasedJsonParser.java:2272)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._skipColon(ReaderBasedJsonParser.java:2187)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:716)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:187)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:347)
+	... 29 more
+2024-05-04 18:15:38,210 [  38396]   WARN - arketplace.MarketplaceRequests - Can not get broken plugins file from Marketplace:Unexpected end-of-input within/between Object entries
+ at [Source: (BufferedReader); line: 1, column: 8193] (through reference chain: java.util.ArrayList[61]) 
+2024-05-04 18:15:44,887 [  45073]   INFO - stubs.SerializationManagerImpl - Name storage is repaired 
+2024-05-04 18:15:45,819 [  46005]   INFO - impl.SharedIndexInfrastructure - Shared index persistent data has been cleared 
+2024-05-04 18:15:58,419 [  58605]   INFO - il.indexing.FileBasedIndexImpl - Indexes to be rebuilt after corruption:FilenameIndex(v = 3),FrameworkDetectionIndex(v = 65536),TodoIndex(v = 4107),IdIndex(v = 4113),filetypes(v = 3),Stubs(v = 46),Trigram.Index(v = 4099),fileIncludes(v = 6),DomFileIndex(v = 0),RelaxSymbolIndex(v = 0),XmlTagNames(v = 1),XmlNamespaces(v = 8),html5.custom.attributes.index(v = 1),SchemaTypeInheritance(v = 2),json.file.root.values(v = 5),xmlProperties(v = 2),editorconfig.index.name(v = 5),yaml.keys.name(v = 1),Py.module.name(v = 0),Py.setuptools.namespace(v = 0) 
+2024-05-04 18:15:58,438 [  58624]   INFO - leBasedIndexDataInitialization - Index data initialization done: 45849 ms. Initialized indexes: [FilenameIndex, filetypes, FrameworkDetectionIndex, IdIndex, TodoIndex, Stubs, Trigram.Index, DomFileIndex, fileIncludes, XmlTagNames, RelaxSymbolIndex, XmlNamespaces, html5.custom.attributes.index, SchemaTypeInheritance, json.file.root.values, xmlProperties, Py.module.name, editorconfig.index.name, yaml.keys.name, Py.setuptools.namespace]. 
+2024-05-04 18:16:02,222 [  62408]   INFO - tellij.psi.stubs.StubIndexImpl - Following stub indices will be built:Python.Decorator(v = 2),Py.class.attributes(v = 2),Py.module.attribute(v = 2),dom.namespaceKey(v = 1),dom.elementClass(v = 0),properties.index(v = 2),markdown.header(v = 2),Py.class.shortName(v = 2),Py.class.shortNameInsensitive(v = 2),Py.function.shortName(v = 2),Py.class.super(v = 2),Py.variable.shortName(v = 3) 
+2024-05-04 18:16:02,224 [  62410]   INFO - exImpl$StubIndexInitialization - Index data initialization done: 3785 ms. Initialized stub indexes: {Py.class.attributes, Py.function.shortName, properties.index, Py.class.shortName, Py.variable.shortName, Python.Decorator, Py.class.super, Py.class.shortNameInsensitive, Py.module.attribute, markdown.header, dom.elementClass, dom.namespaceKey}. 
+2024-05-04 18:16:15,945 [  76131]   INFO - il.indexing.FileBasedIndexImpl - indexes cleared: FilenameIndex, filetypes, FrameworkDetectionIndex, IdIndex, TodoIndex, Stubs, Trigram.Index, DomFileIndex, fileIncludes, XmlTagNames, RelaxSymbolIndex, XmlNamespaces, html5.custom.attributes.index, SchemaTypeInheritance, json.file.root.values, xmlProperties, Py.module.name, editorconfig.index.name, yaml.keys.name, Py.setuptools.namespace
+survived indexes:  
+2024-05-04 18:16:15,947 [  76133]   INFO - il.indexing.FileBasedIndexImpl - schedule index re-scanning, reason: File type change: added - null, removed - null; indexes [FilenameIndex, FrameworkDetectionIndex, TodoIndex, IdIndex, filetypes, Stubs, Trigram.Index, fileIncludes, DomFileIndex, RelaxSymbolIndex, XmlTagNames, XmlNamespaces, html5.custom.attributes.index, SchemaTypeInheritance, json.file.root.values, xmlProperties, editorconfig.index.name, yaml.keys.name, Py.module.name, Py.setuptools.namespace] will be rebuild completely due to version change 
+2024-05-04 18:16:15,969 [  76155]   WARN - .diagnostic.PerformanceWatcher - UI was frozen for 38866ms, details saved to /home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/system/log/threadDumps-freeze-20240504-181542-PC-211.7142.13-38sec 
+2024-05-04 18:22:49,440 [ 469626]   INFO - ication.options.PathMacrosImpl - Saved path macros: {} 
+2024-05-04 18:22:49,448 [ 469634]   WARN - com.intellij.util.xmlb.Binding - no accessors for com.intellij.openapi.updateSettings.impl.pluginsAdvertisement.PluginAdvertiserExtensionsStateService$State 
+2024-05-04 18:22:49,488 [ 469674]   INFO - rationStore.ComponentStoreImpl - Saving appFileTypeManager took 13 ms, HttpConfigurable took 158 ms, XDebuggerSettings took 13 ms, XmlFoldingSettings took 23 ms 
+2024-05-04 18:22:50,235 [ 470421]   INFO - mponents.impl.stores.StoreUtil - saveProjectsAndApp took 1346 ms 
+2024-05-04 18:22:53,527 [ 473713]   INFO - rationStore.ComponentStoreImpl - Saving appFileTypeManager took 15 ms, HttpConfigurable took 120 ms 
+2024-05-04 18:23:01,993 [ 482179]   INFO - rationStore.ComponentStoreImpl - Saving appHttpConfigurable took 145 ms, XDebuggerSettings took 31 ms 
+2024-05-04 18:23:03,020 [ 483206]   INFO - .impl.FileTypeDetectionService - 0 auto-detected files. Detection took 0 ms 
+2024-05-04 18:23:03,063 [ 483249]   INFO - org.jetbrains.io.BuiltInServer - web server stopped 
+2024-05-04 18:23:03,231 [ 483417]   INFO - il.indexing.FileBasedIndexImpl - START INDEX SHUTDOWN 
+2024-05-04 18:23:03,536 [ 483722]   WARN - pl.local.NativeFileWatcherImpl - File watcher is still alive, doing a force quit. 
+2024-05-04 18:23:04,546 [ 484732]   INFO - pl.local.NativeFileWatcherImpl - Watcher terminated with exit code 137 
+2024-05-04 18:23:14,957 [ 495143]   INFO - stubs.SerializationManagerImpl - Start shutting down /home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/system/index/rep.names 
+2024-05-04 18:23:19,459 [ 499645]   INFO - stubs.SerializationManagerImpl - Finished shutting down /home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/system/index/rep.names 
+2024-05-04 18:23:19,581 [ 499767]   INFO - newvfs.persistent.PersistentFS - VFS dispose started 
+2024-05-04 18:23:25,558 [ 505744]   INFO - newvfs.persistent.PersistentFS - VFS dispose completed 
+2024-05-04 18:23:25,625 [ 505811]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE SHUTDOWN ------------------------------------------------------ 
+2024-05-04 18:23:27,675 [ 507861]   INFO - org.jetbrains.io.BuiltInServer - web server stopped 
+2024-05-04 18:23:49,438 [      0]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE STARTED ------------------------------------------------------ 
+2024-05-04 18:23:49,481 [     43]   INFO -        #com.intellij.idea.Main - IDE: PyCharm (build #PC-211.7142.13, 21 Apr 2021 17:35) 
+2024-05-04 18:23:49,787 [    349]   INFO -        #com.intellij.idea.Main - OS: Linux (6.5.0-28-generic, amd64) 
+2024-05-04 18:23:51,040 [   1602]   INFO -        #com.intellij.idea.Main - JRE: 11.0.10+9-b1341.41 (JetBrains s.r.o.) 
+2024-05-04 18:23:51,040 [   1602]   INFO -        #com.intellij.idea.Main - JVM: 11.0.10+9-b1341.41 (OpenJDK 64-Bit Server VM) 
+2024-05-04 18:23:51,138 [   1700]   INFO -        #com.intellij.idea.Main - JVM Args: -Didea.auto.reload.plugins=true -Didea.classpath.index.enabled=false -Didea.config.path=/home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/config -Didea.is.internal=true -Didea.platform.prefix=PyCharmCore -Didea.plugins.path=/home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/plugins -Didea.required.plugins.id=pynose.PyNose -Didea.system.path=/home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/system -Dsun.awt.disablegrab=true -Xms256m -Xmx512m -Dfile.encoding=UTF-8 -Duser.country=JP -Duser.language=ja -Duser.variant -ea 
+2024-05-04 18:23:51,138 [   1700]   INFO -        #com.intellij.idea.Main - library path: /usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib 
+2024-05-04 18:23:51,140 [   1702]   INFO -        #com.intellij.idea.Main - boot library path: /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains/jbre/jbr_jcef-11_0_10-linux-x64-b1341.41/jbr/lib 
+2024-05-04 18:23:51,709 [   2271]   INFO -        #com.intellij.idea.Main - locale=ja_JP JNU=UTF-8 file.encoding=UTF-8
+  idea.config.path=/home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/config
+  idea.system.path=/home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/system
+  idea.plugins.path=/home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/plugins
+  idea.log.path=/home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/system/log 
+2024-05-04 18:23:55,200 [   5762]   WARN - llij.ide.plugins.PluginManager - Resource bundle redefinition for plugin 'com.jetbrains.pycharm.community.customization'. Old value: messages.ActionsBundle, new value: messages.PyBundle 
+2024-05-04 18:23:56,438 [   7000]   INFO -        #com.intellij.idea.Main - JNA library (64-bit) loaded in 4620 ms 
+2024-05-04 18:23:56,568 [   7130]   INFO - ntellij.idea.ApplicationLoader - CPU cores: 16; ForkJoinPool.commonPool: java.util.concurrent.ForkJoinPool@663794d6[Running, parallelism = 15, size = 1, active = 0, running = 0, steals = 3, tasks = 0, submissions = 0]; factory: com.intellij.concurrency.IdeaForkJoinWorkerThreadFactory@4844b3e 
+2024-05-04 18:23:56,889 [   7451]   INFO - ntellij.idea.ApplicationLoader - WM detected: GNOME Shell 
+2024-05-04 18:23:56,834 [   7396]   INFO - llij.ide.plugins.PluginManager - Loaded bundled plugins: IDEA CORE (211.7142.13), com.intellij.platform.images (211.7142.13), Subversion (211.7142.13), Machine Learning Code Completion (211.7142.13), Configuration Script (211.7142.13), Shared Indexes (211.7142.13), Shared Indexes for Python (211.7142.13), Copyright (211.7142.13), macOS Light Theme (211.7142.13), Windows 10 Light Theme (211.7142.13), JetBrains Marketplace (211.7142.13), Properties (211.7142.13), Task Management (211.7142.13), Mercurial (211.7142.13), EditorConfig (211.7142.13), Emoji Picker (211.7142.13), ReStructuredText (211.7142.13), Terminal (211.7142.13), Git (211.7142.13), ChangeReminder (211.7142.13), GitHub (211.7142.13), Code With Me (211.7142.13), Shell Script (211.7142.13), TextMate Bundles (211.7142.13), YAML (211.7142.13), Settings Repository (211.7142.13), IDE Features Trainer (211.7142.13), IntelliLang (211.7142.13), Markdown (211.7142.13), Grazie (211.7142.13), Python Community Edition (211.7142.13), PyCharm Community Customization (211.7142.13) 
+2024-05-04 18:23:56,981 [   7543]   INFO - llij.ide.plugins.PluginManager - Loaded custom plugins: PyNose (1.0-SNAPSHOT) 
+2024-05-04 18:23:58,009 [   8571]   INFO - m.intellij.util.io.StorageLock - lower=100; upper=492; buffer=10; max=492 
+2024-05-04 18:23:58,759 [   9321]   WARN - j.internal.DebugAttachDetector - Unable to start DebugAttachDetector, please add `--add-exports java.base/jdk.internal.vm=ALL-UNNAMED` to VM options 
+2024-05-04 18:23:59,319 [   9881]   INFO - intellij.diagnostic.JitWatcher - JIT compilation state checking enabled 
+2024-05-04 18:23:59,807 [  10369]   INFO - ication.options.PathMacrosImpl - Loaded path macros: {} 
+2024-05-04 18:24:01,412 [  11974]   INFO - til.net.ssl.CertificateManager - Default SSL context initialized 
+2024-05-04 18:24:01,775 [  12337]   INFO - rains.ide.BuiltInServerManager - built-in server started, port 63343 
+2024-05-04 18:24:01,779 [  12341]   INFO - tellij.util.io.FileChannelUtil - uninterruptible FileChannels will be used for indexes 
+2024-05-04 18:24:03,347 [  13909]   INFO - pl.local.NativeFileWatcherImpl - Starting file watcher: /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPC/2021.1.1/7e006ed9da260f8a5bf071cb7523e125f956f18a/pycharmPC-2021.1.1/bin/linux/fsnotifier64 
+2024-05-04 18:24:03,347 [  13909]   INFO - ntellij.idea.ApplicationLoader - canDisableInputMethod spent 499 ms, found keyboard layouts: [(jp, xkb), ], result==true 
+2024-05-04 18:24:03,509 [  14071]   INFO - gs.impl.UpdateCheckerComponent - channel: release 
+2024-05-04 18:24:03,846 [  14408]   INFO - pl.local.NativeFileWatcherImpl - Native file watcher is operational. 
+2024-05-04 18:24:04,891 [  15453]   INFO - penapi.application.Experiments - Experimental features enabled for user: wsl.p9.support, wsl.prefer.p9.support, wsl.p9.show.roots.in.file.chooser, wsl.execute.with.wsl.exe, inline.browse.button, linux.native.menu, recent.and.edited.files.together, show.create.new.element.in.popup, search.everywhere.mixed.results, i18n.match.actions, editor.reader.mode, edit.run.configurations.while.dumb, new.large.text.file.viewer 
+2024-05-04 18:24:05,573 [  16135]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: com.intellij] 
+2024-05-04 18:24:05,787 [  16349]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: com.intellij] 
+2024-05-04 18:24:05,861 [  16423]   WARN - nSystem.impl.ActionManagerImpl - keymap "NetBeans 6.5" not found [Plugin: com.intellij] 
+2024-05-04 18:24:05,923 [  16485]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: com.intellij] 
+2024-05-04 18:24:06,329 [  16891]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: org.jetbrains.plugins.github] 
+2024-05-04 18:24:06,465 [  17027]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: PythonCore] 
+2024-05-04 18:24:06,607 [  17169]   WARN - nSystem.impl.ActionManagerImpl - keymap "NetBeans 6.5" not found [Plugin: PythonCore] 
+2024-05-04 18:24:08,308 [  18870]   INFO - penapi.wm.impl.GlobalMenuLinux - can't start main loop via JavaFX (will run it manually): com.sun.javafx.application.PlatformImpl 
+2024-05-04 18:24:08,728 [  19290]   INFO - penapi.application.Experiments - Experimental feature 'terminal.shell.command.handling' is now turned OFF 
+2024-05-04 18:24:10,564 [  21126]   INFO - impl.SharedIndexMainZipStorage - Shared Indexes Storage is opened: <empty>, chunks: [] 
+2024-05-04 18:24:19,284 [  29846]   WARN - .diagnostic.PerformanceWatcher - UI was frozen for 7845ms, details saved to /home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/system/log/threadDumps-freeze-20240504-182407-PC-211.7142.13-7sec 
+2024-05-04 18:24:24,883 [  35445]  ERROR - j.util.io.ResizeableMappedFile - real size = 0 
+java.io.EOFException
+	at java.base/java.io.DataInputStream.readFully(DataInputStream.java:202)
+	at java.base/java.io.DataInputStream.readLong(DataInputStream.java:421)
+	at com.intellij.util.io.ResizeableMappedFile.readLength(ResizeableMappedFile.java:179)
+	at com.intellij.util.io.ResizeableMappedFile.<init>(ResizeableMappedFile.java:66)
+	at com.intellij.util.io.ResizeableMappedFile.<init>(ResizeableMappedFile.java:55)
+	at com.intellij.util.io.keyStorage.AppendableStorageBackedByResizableMappedFile.<init>(AppendableStorageBackedByResizableMappedFile.java:36)
+	at com.intellij.util.io.PersistentEnumeratorBase.<init>(PersistentEnumeratorBase.java:243)
+	at com.intellij.util.io.PersistentBTreeEnumerator.<init>(PersistentBTreeEnumerator.java:73)
+	at com.intellij.util.io.PersistentBTreeEnumerator.<init>(PersistentBTreeEnumerator.java:65)
+	at com.intellij.util.io.PersistentEnumerator.<init>(PersistentEnumerator.java:40)
+	at com.intellij.util.io.PersistentEnumerator.<init>(PersistentEnumerator.java:33)
+	at com.intellij.util.indexing.snapshot.CompositeHashIdEnumerator.init(CompositeHashIdEnumerator.kt:49)
+	at com.intellij.util.indexing.snapshot.CompositeHashIdEnumerator.<init>(CompositeHashIdEnumerator.kt:21)
+	at com.intellij.util.indexing.snapshot.SnapshotInputMappings.<init>(SnapshotInputMappings.java:79)
+	at com.intellij.util.indexing.impl.storage.DefaultIndexStorageLayout$SnapshotMappingsStorageLayout$mySnapshotInputMappings$2.invoke(DefaultIndexStorageLayout.kt:107)
+	at com.intellij.util.indexing.impl.storage.DefaultIndexStorageLayout$SnapshotMappingsStorageLayout$mySnapshotInputMappings$2.invoke(DefaultIndexStorageLayout.kt:104)
+	at kotlin.UnsafeLazyImpl.getValue(Lazy.kt:81)
+	at com.intellij.util.indexing.impl.storage.DefaultIndexStorageLayout$SnapshotMappingsStorageLayout.getMySnapshotInputMappings(DefaultIndexStorageLayout.kt)
+	at com.intellij.util.indexing.impl.storage.DefaultIndexStorageLayout$SnapshotMappingsStorageLayout.getForwardIndexAccessor(DefaultIndexStorageLayout.kt:134)
+	at com.intellij.util.indexing.impl.storage.TransientFileContentIndex$1.getForwardIndexAccessor(TransientFileContentIndex.java:60)
+	at com.intellij.util.indexing.impl.storage.VfsAwareMapReduceIndex.<init>(VfsAwareMapReduceIndex.java:69)
+	at com.intellij.util.indexing.impl.storage.TransientFileContentIndex.<init>(TransientFileContentIndex.java:36)
+	at com.intellij.util.indexing.FileBasedIndexImpl.createIndex(FileBasedIndexImpl.java:546)
+	at com.intellij.util.indexing.FileBasedIndexImpl.initIndexStorage(FileBasedIndexImpl.java:479)
+	at com.intellij.util.indexing.FileBasedIndexImpl.registerIndexer(FileBasedIndexImpl.java:439)
+	at com.intellij.util.indexing.FileBasedIndexDataInitialization.lambda$initAssociatedDataForExtensions$0(FileBasedIndexDataInitialization.java:79)
+	at com.intellij.util.indexing.IndexDataInitializer.executeTask(IndexDataInitializer.kt:75)
+	at com.intellij.util.indexing.IndexDataInitializer.access$executeTask(IndexDataInitializer.kt:15)
+	at com.intellij.util.indexing.IndexDataInitializer$runParallelTasks$$inlined$map$lambda$1.run(IndexDataInitializer.kt:49)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at com.intellij.util.concurrency.BoundedTaskExecutor.doRun(BoundedTaskExecutor.java:216)
+	at com.intellij.util.concurrency.BoundedTaskExecutor.access$200(BoundedTaskExecutor.java:27)
+	at com.intellij.util.concurrency.BoundedTaskExecutor$1.execute(BoundedTaskExecutor.java:195)
+	at com.intellij.util.ConcurrencyUtil.runUnderThreadName(ConcurrencyUtil.java:213)
+	at com.intellij.util.concurrency.BoundedTaskExecutor$1.run(BoundedTaskExecutor.java:184)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:668)
+	at java.base/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:665)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:665)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2024-05-04 18:24:24,909 [  35471]  ERROR - j.util.io.ResizeableMappedFile - PyCharm 2021.1.1  Build #PC-211.7142.13 
+2024-05-04 18:24:24,937 [  35499]  ERROR - j.util.io.ResizeableMappedFile - JDK: 11.0.10; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o. 
+2024-05-04 18:24:24,937 [  35499]  ERROR - j.util.io.ResizeableMappedFile - OS: Linux 
+2024-05-04 18:24:24,940 [  35502]  ERROR - j.util.io.ResizeableMappedFile - Last Action:  
+2024-05-04 18:24:42,233 [  52795]   WARN - .diagnostic.PerformanceWatcher - UI was frozen for 10590ms, details saved to /home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/system/log/threadDumps-freeze-20240504-182431-PC-211.7142.13-10sec 
+2024-05-04 18:24:55,382 [  65944]   INFO - leBasedIndexDataInitialization - Index data initialization done: 52645 ms. Initialized indexes: [FilenameIndex, filetypes, FrameworkDetectionIndex, IdIndex, TodoIndex, Trigram.Index, Stubs, DomFileIndex, fileIncludes, XmlNamespaces, XmlTagNames, RelaxSymbolIndex, html5.custom.attributes.index, json.file.root.values, editorconfig.index.name, xmlProperties, SchemaTypeInheritance, Py.module.name, yaml.keys.name, Py.setuptools.namespace]. 
+2024-05-04 18:24:56,196 [  66758]   INFO - exImpl$StubIndexInitialization - Index data initialization done: 812 ms. Initialized stub indexes: {Py.class.attributes, Py.function.shortName, properties.index, Py.class.shortName, Py.variable.shortName, Python.Decorator, Py.class.super, Py.class.shortNameInsensitive, Py.module.attribute, markdown.header, dom.elementClass, dom.namespaceKey}. 
+2024-05-04 18:26:23,567 [ 154129]   INFO - ns.python.sdk.PythonSdkUpdater - Updating sys.path took 23 ms 
+2024-05-04 18:26:23,626 [ 154188]   INFO - ns.python.sdk.PythonSdkUpdater - Bogus sys.path entry /usr/lib/python310.zip 
+2024-05-04 18:26:23,717 [ 154279]   INFO - ns.python.sdk.PythonSdkUpdater - Binary skeletons directory for SDK Python 3.10 (/usr/bin/python3)): /home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/system/python_stubs/-2066100795 
+2024-05-04 18:26:23,727 [ 154289]   INFO - ns.python.sdk.PythonSdkUpdater - User skeletons directory for SDK Python 3.10 (/usr/bin/python3)): /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPC/2021.1.1/7e006ed9da260f8a5bf071cb7523e125f956f18a/pycharmPC-2021.1.1/plugins/python-ce/helpers/python-skeletons 
+2024-05-04 18:26:24,254 [ 154816]   INFO - packaging.PyPackageManagerImpl - Running packaging tool: /usr/bin/python3 /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPC/2021.1.1/7e006ed9da260f8a5bf071cb7523e125f956f18a/pycharmPC-2021.1.1/plugins/python-ce/helpers/packaging_tool.py list 
+2024-05-04 18:26:24,254 [ 154816]   INFO - packaging.PyPackageManagerImpl - Running packaging tool: /usr/bin/python3 /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPC/2021.1.1/7e006ed9da260f8a5bf071cb7523e125f956f18a/pycharmPC-2021.1.1/plugins/python-ce/helpers/packaging_tool.py list 
+2024-05-04 18:26:29,527 [ 160089]   INFO - hon.packaging.PyPIPackageCache - Package cache /home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/system/python_packages/pypi-cache.json was not found 
+2024-05-04 18:26:29,673 [ 160235]   INFO - thon.packaging.PyPIPackageUtil - Fetching index of all packages available on https://pypi.python.org/simple 
+2024-05-04 18:26:45,238 [ 175800]   INFO - ns.python.sdk.PythonSdkUpdater - Updating sys.path took 278 ms 
+2024-05-04 18:26:45,622 [ 176184]   INFO - ns.python.sdk.PythonSdkUpdater - Bogus sys.path entry /usr/lib/python310.zip 
+2024-05-04 18:26:50,581 [ 181143]   INFO - ns.python.sdk.PythonSdkUpdater - Binary skeletons directory for SDK Python 3.10 (/usr/bin/python3)): /home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/system/python_stubs/-2066100795 
+2024-05-04 18:26:50,601 [ 181163]   INFO - ns.python.sdk.PythonSdkUpdater - User skeletons directory for SDK Python 3.10 (/usr/bin/python3)): /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPC/2021.1.1/7e006ed9da260f8a5bf071cb7523e125f956f18a/pycharmPC-2021.1.1/plugins/python-ce/helpers/python-skeletons 
+2024-05-04 18:26:56,012 [ 186574]   INFO - erver.followMe.FollowMeManager - Register new user 0:'shupira' with ClientId=ClientId(value=Host) 
+2024-05-04 18:27:02,498 [ 193060]   INFO - ication.options.PathMacrosImpl - Saved path macros: {} 
+2024-05-04 18:27:04,218 [ 194780]   WARN - com.intellij.util.xmlb.Binding - no accessors for com.intellij.openapi.updateSettings.impl.pluginsAdvertisement.PluginAdvertiserExtensionsStateService$State 
+2024-05-04 18:27:04,486 [ 195048]   INFO - rationStore.ComponentStoreImpl - Saving appDaemonCodeAnalyzerSettings took 55 ms, EditorColorsManagerImpl took 71 ms, EditorSettings took 45 ms, HttpConfigurable took 535 ms, PathMacrosImpl took 1716 ms, PluginAdvertiserExtensions took 123 ms, ProjectJdkTable took 21 ms, TemplateSettings took 75 ms, UpdatesConfigurable took 43 ms 
+2024-05-04 18:27:06,455 [ 197017]   INFO - pl.local.NativeFileWatcherImpl - Watcher terminated with exit code 0 
+2024-05-04 18:27:06,456 [ 197018]   INFO - .impl.FileTypeDetectionService - 0 auto-detected files. Detection took 0 ms 
+2024-05-04 18:27:06,458 [ 197020]   INFO - org.jetbrains.io.BuiltInServer - web server stopped 
+2024-05-04 18:27:06,479 [ 197041]   INFO - erver.followMe.FollowMeManager - Unregister user 0:'shupira' with ClientId=ClientId(value=Host) 
+2024-05-04 18:27:06,490 [ 197052]   INFO - il.indexing.FileBasedIndexImpl - START INDEX SHUTDOWN 
+2024-05-04 18:27:07,549 [ 198111]   INFO - tellij.psi.stubs.StubIndexImpl - StubIndexExtension-s were unloaded 
+2024-05-04 18:27:09,026 [ 199588]   INFO - il.indexing.FileBasedIndexImpl - END INDEX SHUTDOWN 
+2024-05-04 18:27:09,027 [ 199589]   INFO - newvfs.persistent.PersistentFS - VFS dispose started 
+2024-05-04 18:27:09,090 [ 199652]   INFO - newvfs.persistent.PersistentFS - VFS dispose completed 
+2024-05-04 18:27:09,091 [ 199653]   INFO - stubs.SerializationManagerImpl - Start shutting down /home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/system/index/rep.names 
+2024-05-04 18:27:09,119 [ 199681]   INFO - stubs.SerializationManagerImpl - Finished shutting down /home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/system/index/rep.names 
+2024-05-04 18:27:09,178 [ 199740]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE SHUTDOWN ------------------------------------------------------ 
+2024-05-04 18:27:09,365 [ 199927]   INFO - org.jetbrains.io.BuiltInServer - web server stopped 
+2024-10-11 15:33:37,000 [      0]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE STARTED ------------------------------------------------------ 
+2024-10-11 15:33:37,014 [     14]   INFO - llij.ide.gdpr.EndUserAgreement - euaCommunity: /home/shupira/.local/share/JetBrains/PrivacyPolicy/euaCommunity.cached 
+2024-10-11 15:33:37,103 [    103]   INFO -        #com.intellij.idea.Main - IDE: PyCharm (build #PC-211.7142.13, 21 Apr 2021 17:35) 
+2024-10-11 15:33:37,104 [    104]   INFO -        #com.intellij.idea.Main - OS: Linux (6.8.0-45-generic, amd64) 
+2024-10-11 15:33:37,126 [    126]   INFO -        #com.intellij.idea.Main - JRE: 11.0.10+9-b1341.41 (JetBrains s.r.o.) 
+2024-10-11 15:33:37,138 [    138]   INFO -        #com.intellij.idea.Main - JVM: 11.0.10+9-b1341.41 (OpenJDK 64-Bit Server VM) 
+2024-10-11 15:33:37,140 [    140]   INFO -        #com.intellij.idea.Main - JVM Args: -Didea.auto.reload.plugins=true -Didea.classpath.index.enabled=false -Didea.config.path=/home/shupira/Documents/TestSmellResV6/testsmellresv6/PyNose-ASE2021/build/idea-sandbox/config -Didea.is.internal=true -Didea.platform.prefix=PyCharmCore -Didea.plugins.path=/home/shupira/Documents/TestSmellResV6/testsmellresv6/PyNose-ASE2021/build/idea-sandbox/plugins -Didea.required.plugins.id=pynose.PyNose -Didea.system.path=/home/shupira/Documents/TestSmellResV6/testsmellresv6/PyNose-ASE2021/build/idea-sandbox/system -Dsun.awt.disablegrab=true -Xms256m -Xmx512m -Dfile.encoding=UTF-8 -Duser.country=JP -Duser.language=ja -Duser.variant -ea 
+2024-10-11 15:33:37,141 [    141]   INFO -        #com.intellij.idea.Main - library path: /usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib 
+2024-10-11 15:33:37,141 [    141]   INFO -        #com.intellij.idea.Main - boot library path: /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains/jbre/jbr_jcef-11_0_10-linux-x64-b1341.41/jbr/lib 
+2024-10-11 15:33:37,199 [    199]   INFO -        #com.intellij.idea.Main - locale=ja_JP JNU=UTF-8 file.encoding=UTF-8
+  idea.config.path=/home/shupira/Documents/TestSmellResV6/testsmellresv6/PyNose-ASE2021/build/idea-sandbox/config
+  idea.system.path=/home/shupira/Documents/TestSmellResV6/testsmellresv6/PyNose-ASE2021/build/idea-sandbox/system
+  idea.plugins.path=/home/shupira/Documents/TestSmellResV6/testsmellresv6/PyNose-ASE2021/build/idea-sandbox/plugins
+  idea.log.path=/home/shupira/Documents/TestSmellResV6/testsmellresv6/PyNose-ASE2021/build/idea-sandbox/system/log 
+2024-10-11 15:33:37,314 [    314]   INFO -        #com.intellij.idea.Main - JNA library (64-bit) loaded in 60 ms 
+2024-10-11 15:33:37,520 [    520]   WARN - llij.ide.plugins.PluginManager - Resource bundle redefinition for plugin 'com.jetbrains.pycharm.community.customization'. Old value: messages.ActionsBundle, new value: messages.PyBundle 
+2024-10-11 15:33:37,896 [    896]   INFO - llij.ide.plugins.PluginManager - Loaded bundled plugins: IDEA CORE (211.7142.13), com.intellij.platform.images (211.7142.13), Subversion (211.7142.13), Machine Learning Code Completion (211.7142.13), Configuration Script (211.7142.13), Shared Indexes (211.7142.13), Shared Indexes for Python (211.7142.13), Copyright (211.7142.13), macOS Light Theme (211.7142.13), Windows 10 Light Theme (211.7142.13), JetBrains Marketplace (211.7142.13), Properties (211.7142.13), Task Management (211.7142.13), Mercurial (211.7142.13), EditorConfig (211.7142.13), Emoji Picker (211.7142.13), ReStructuredText (211.7142.13), Terminal (211.7142.13), Git (211.7142.13), ChangeReminder (211.7142.13), GitHub (211.7142.13), Code With Me (211.7142.13), Shell Script (211.7142.13), TextMate Bundles (211.7142.13), YAML (211.7142.13), Settings Repository (211.7142.13), IDE Features Trainer (211.7142.13), IntelliLang (211.7142.13), Markdown (211.7142.13), Grazie (211.7142.13), Python Community Edition (211.7142.13), PyCharm Community Customization (211.7142.13) 
+2024-10-11 15:33:37,897 [    897]   INFO - llij.ide.plugins.PluginManager - Loaded custom plugins: PyNose (1.0-SNAPSHOT) 
+2024-10-11 15:33:38,258 [   1258]   INFO - ntellij.idea.ApplicationLoader - CPU cores: 30; ForkJoinPool.commonPool: java.util.concurrent.ForkJoinPool@39a4518e[Running, parallelism = 29, size = 0, active = 0, running = 0, steals = 0, tasks = 0, submissions = 0]; factory: com.intellij.concurrency.IdeaForkJoinWorkerThreadFactory@60c02180 
+2024-10-11 15:33:38,360 [   1360]   INFO - ntellij.idea.ApplicationLoader - WM detected: GNOME Shell 
+2024-10-11 15:33:39,465 [   2465]   WARN - j.internal.DebugAttachDetector - Unable to start DebugAttachDetector, please add `--add-exports java.base/jdk.internal.vm=ALL-UNNAMED` to VM options 
+2024-10-11 15:33:39,600 [   2600]   INFO - m.intellij.util.io.StorageLock - lower=100; upper=492; buffer=10; max=492 
+2024-10-11 15:33:39,617 [   2617]   INFO - ication.options.PathMacrosImpl - Loaded path macros: {} 
+2024-10-11 15:33:39,641 [   2641]   INFO - tellij.util.io.FileChannelUtil - uninterruptible FileChannels will be used for indexes 
+2024-10-11 15:33:39,710 [   2710]   INFO - rains.ide.BuiltInServerManager - built-in server started, port 63343 
+2024-10-11 15:33:39,763 [   2763]   INFO - intellij.diagnostic.JitWatcher - JIT compilation state checking enabled 
+2024-10-11 15:33:39,960 [   2960]   INFO - til.net.ssl.CertificateManager - Default SSL context initialized 
+2024-10-11 15:33:40,009 [   3009]   INFO - pl.local.NativeFileWatcherImpl - Starting file watcher: /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPC/2021.1.1/7e006ed9da260f8a5bf071cb7523e125f956f18a/pycharmPC-2021.1.1/bin/linux/fsnotifier64 
+2024-10-11 15:33:40,018 [   3018]   INFO - ntellij.idea.ApplicationLoader - canDisableInputMethod spent 23 ms, found keyboard layouts: [(jp, xkb), (mozc-jp, ibus), ], result==false 
+2024-10-11 15:33:40,023 [   3023]   INFO - gs.impl.UpdateCheckerComponent - channel: release 
+2024-10-11 15:33:40,051 [   3051]   INFO - pl.local.NativeFileWatcherImpl - Native file watcher is operational. 
+2024-10-11 15:33:40,134 [   3134]   INFO - penapi.application.Experiments - Experimental features enabled for user: wsl.p9.support, wsl.prefer.p9.support, wsl.p9.show.roots.in.file.chooser, wsl.execute.with.wsl.exe, inline.browse.button, linux.native.menu, recent.and.edited.files.together, show.create.new.element.in.popup, search.everywhere.mixed.results, i18n.match.actions, editor.reader.mode, edit.run.configurations.while.dumb, new.large.text.file.viewer 
+2024-10-11 15:33:40,144 [   3144]   INFO - impl.SharedIndexMainZipStorage - Shared Indexes Storage is opened: <empty>, chunks: [] 
+2024-10-11 15:33:40,214 [   3214]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: com.intellij] 
+2024-10-11 15:33:40,223 [   3223]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: com.intellij] 
+2024-10-11 15:33:40,223 [   3223]   WARN - nSystem.impl.ActionManagerImpl - keymap "NetBeans 6.5" not found [Plugin: com.intellij] 
+2024-10-11 15:33:40,223 [   3223]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: com.intellij] 
+2024-10-11 15:33:40,414 [   3414]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: org.jetbrains.plugins.github] 
+2024-10-11 15:33:40,464 [   3464]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: PythonCore] 
+2024-10-11 15:33:40,471 [   3471]   WARN - nSystem.impl.ActionManagerImpl - keymap "NetBeans 6.5" not found [Plugin: PythonCore] 
+2024-10-11 15:33:40,704 [   3704]   INFO - penapi.wm.impl.GlobalMenuLinux - can't start main loop via JavaFX (will run it manually): com.sun.javafx.application.PlatformImpl 
+2024-10-11 15:33:40,724 [   3724]   INFO - penapi.application.Experiments - Experimental feature 'terminal.shell.command.handling' is now turned OFF 
+2024-10-11 15:33:41,283 [   4283]   INFO - leBasedIndexDataInitialization - Index data initialization done: 1359 ms. Initialized indexes: [FilenameIndex, filetypes, IdIndex, FrameworkDetectionIndex, TodoIndex, Trigram.Index, DomFileIndex, RelaxSymbolIndex, XmlTagNames, fileIncludes, html5.custom.attributes.index, XmlNamespaces, SchemaTypeInheritance, xmlProperties, json.file.root.values, Py.module.name, editorconfig.index.name, Py.setuptools.namespace, yaml.keys.name, Stubs]. 
+2024-10-11 15:33:41,300 [   4300]   INFO - exImpl$StubIndexInitialization - Index data initialization done: 16 ms. Initialized stub indexes: {Py.class.attributes, Py.function.shortName, properties.index, Py.class.shortName, Py.variable.shortName, Python.Decorator, Py.class.super, Py.class.shortNameInsensitive, Py.module.attribute, markdown.header, dom.elementClass, dom.namespaceKey}. 
+2024-10-11 15:34:07,013 [  30013]   INFO - packaging.PyPackageManagerImpl - Running packaging tool: /usr/bin/python3 /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPC/2021.1.1/7e006ed9da260f8a5bf071cb7523e125f956f18a/pycharmPC-2021.1.1/plugins/python-ce/helpers/packaging_tool.py list 
+2024-10-11 15:34:07,048 [  30048]   INFO - packaging.PyPackageManagerImpl - Running packaging tool: /usr/bin/python3 /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPC/2021.1.1/7e006ed9da260f8a5bf071cb7523e125f956f18a/pycharmPC-2021.1.1/plugins/python-ce/helpers/packaging_tool.py list 
+2024-10-11 15:34:09,185 [  32185]   INFO - hon.packaging.PyPIPackageCache - Loaded 535245 packages from /home/shupira/Documents/TestSmellResV6/testsmellresv6/PyNose-ASE2021/build/idea-sandbox/system/python_packages/pypi-cache.json 
+2024-10-11 15:34:21,577 [  44577]   INFO - ns.python.sdk.PythonSdkUpdater - Updating sys.path took 73 ms 
+2024-10-11 15:34:21,582 [  44582]   INFO - ns.python.sdk.PythonSdkUpdater - Bogus sys.path entry /usr/lib/python312.zip 
+2024-10-11 15:34:21,623 [  44623]   INFO - ns.python.sdk.PythonSdkUpdater - Binary skeletons directory for SDK Python 3.10 (/usr/bin/python3)): /home/shupira/Documents/TestSmellResV6/testsmellresv6/PyNose-ASE2021/build/idea-sandbox/system/python_stubs/-2066100795 
+2024-10-11 15:34:21,623 [  44623]   INFO - ns.python.sdk.PythonSdkUpdater - User skeletons directory for SDK Python 3.10 (/usr/bin/python3)): /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPC/2021.1.1/7e006ed9da260f8a5bf071cb7523e125f956f18a/pycharmPC-2021.1.1/plugins/python-ce/helpers/python-skeletons 
+2024-10-11 15:34:23,650 [  46650]   INFO - erver.followMe.FollowMeManager - Register new user 0:'shupira' with ClientId=ClientId(value=Host) 
+2024-10-11 15:34:24,016 [  47016]   INFO - ication.options.PathMacrosImpl - Saved path macros: {} 
+2024-10-11 15:34:24,018 [  47018]   WARN - com.intellij.util.xmlb.Binding - no accessors for com.intellij.openapi.updateSettings.impl.pluginsAdvertisement.PluginAdvertiserExtensionsStateService$State 
+2024-10-11 15:34:24,037 [  47037]   INFO - rationStore.ComponentStoreImpl - Saving appDaemonCodeAnalyzerSettings took 18 ms, FileTypeManager took 11 ms 
+2024-10-11 15:34:24,065 [  47065]   INFO - rationStore.ComponentStoreImpl - Saving default projectPyConsoleOptionsProvider took 12 ms 
+2024-10-11 15:34:25,491 [  48491]   INFO - rationStore.ComponentStoreImpl - Saving appInspectionProfileManager took 14 ms 
+2024-10-11 15:34:25,567 [  48567]   INFO - pl.local.NativeFileWatcherImpl - Watcher terminated with exit code 0 
+2024-10-11 15:34:25,569 [  48569]   INFO - .impl.FileTypeDetectionService - 3 auto-detected files. Detection took 76 ms 
+2024-10-11 15:34:25,573 [  48573]   INFO - org.jetbrains.io.BuiltInServer - web server stopped 
+2024-10-11 15:34:25,651 [  48651]   INFO - erver.followMe.FollowMeManager - Unregister user 0:'shupira' with ClientId=ClientId(value=Host) 
+2024-10-11 15:34:25,676 [  48676]   INFO - il.indexing.FileBasedIndexImpl - START INDEX SHUTDOWN 
+2024-10-11 15:34:25,809 [  48809]   INFO - tellij.psi.stubs.StubIndexImpl - StubIndexExtension-s were unloaded 
+2024-10-11 15:34:25,813 [  48813]   INFO - il.indexing.FileBasedIndexImpl - END INDEX SHUTDOWN 
+2024-10-11 15:34:25,813 [  48813]   INFO - newvfs.persistent.PersistentFS - VFS dispose started 
+2024-10-11 15:34:25,820 [  48820]   INFO - newvfs.persistent.PersistentFS - VFS dispose completed 
+2024-10-11 15:34:25,821 [  48821]   INFO - stubs.SerializationManagerImpl - Start shutting down /home/shupira/Documents/TestSmellResV6/testsmellresv6/PyNose-ASE2021/build/idea-sandbox/system/index/rep.names 
+2024-10-11 15:34:25,822 [  48822]   INFO - stubs.SerializationManagerImpl - Finished shutting down /home/shupira/Documents/TestSmellResV6/testsmellresv6/PyNose-ASE2021/build/idea-sandbox/system/index/rep.names 
+2024-10-11 15:34:25,833 [  48833]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE SHUTDOWN ------------------------------------------------------ 
+2024-10-11 15:34:25,840 [  48840]   INFO - org.jetbrains.io.BuiltInServer - web server stopped 
+2024-10-11 15:36:36,667 [      0]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE STARTED ------------------------------------------------------ 
+2024-10-11 15:36:36,679 [     12]   INFO - llij.ide.gdpr.EndUserAgreement - euaCommunity: /home/shupira/.local/share/JetBrains/PrivacyPolicy/euaCommunity.cached 
+2024-10-11 15:36:36,792 [    125]   INFO -        #com.intellij.idea.Main - IDE: PyCharm (build #PC-211.7142.13, 21 Apr 2021 17:35) 
+2024-10-11 15:36:36,795 [    128]   INFO -        #com.intellij.idea.Main - OS: Linux (6.8.0-45-generic, amd64) 
+2024-10-11 15:36:36,833 [    166]   INFO -        #com.intellij.idea.Main - JRE: 11.0.10+9-b1341.41 (JetBrains s.r.o.) 
+2024-10-11 15:36:36,834 [    167]   INFO -        #com.intellij.idea.Main - JVM: 11.0.10+9-b1341.41 (OpenJDK 64-Bit Server VM) 
+2024-10-11 15:36:36,835 [    168]   INFO -        #com.intellij.idea.Main - JVM Args: -Didea.auto.reload.plugins=true -Didea.classpath.index.enabled=false -Didea.config.path=/home/shupira/Documents/TestSmellResV6/testsmellresv6/PyNose-ASE2021/build/idea-sandbox/config -Didea.is.internal=true -Didea.platform.prefix=PyCharmCore -Didea.plugins.path=/home/shupira/Documents/TestSmellResV6/testsmellresv6/PyNose-ASE2021/build/idea-sandbox/plugins -Didea.required.plugins.id=pynose.PyNose -Didea.system.path=/home/shupira/Documents/TestSmellResV6/testsmellresv6/PyNose-ASE2021/build/idea-sandbox/system -Dsun.awt.disablegrab=true -Xms256m -Xmx512m -Dfile.encoding=UTF-8 -Duser.country=JP -Duser.language=ja -Duser.variant -ea 
+2024-10-11 15:36:36,837 [    170]   INFO -        #com.intellij.idea.Main - library path: /usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib 
+2024-10-11 15:36:36,837 [    170]   INFO -        #com.intellij.idea.Main - boot library path: /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains/jbre/jbr_jcef-11_0_10-linux-x64-b1341.41/jbr/lib 
+2024-10-11 15:36:36,921 [    254]   INFO -        #com.intellij.idea.Main - locale=ja_JP JNU=UTF-8 file.encoding=UTF-8
+  idea.config.path=/home/shupira/Documents/TestSmellResV6/testsmellresv6/PyNose-ASE2021/build/idea-sandbox/config
+  idea.system.path=/home/shupira/Documents/TestSmellResV6/testsmellresv6/PyNose-ASE2021/build/idea-sandbox/system
+  idea.plugins.path=/home/shupira/Documents/TestSmellResV6/testsmellresv6/PyNose-ASE2021/build/idea-sandbox/plugins
+  idea.log.path=/home/shupira/Documents/TestSmellResV6/testsmellresv6/PyNose-ASE2021/build/idea-sandbox/system/log 
+2024-10-11 15:36:37,027 [    360]   INFO -        #com.intellij.idea.Main - JNA library (64-bit) loaded in 68 ms 
+2024-10-11 15:36:37,258 [    591]   WARN - llij.ide.plugins.PluginManager - Resource bundle redefinition for plugin 'com.jetbrains.pycharm.community.customization'. Old value: messages.ActionsBundle, new value: messages.PyBundle 
+2024-10-11 15:36:37,603 [    936]   INFO - llij.ide.plugins.PluginManager - Loaded bundled plugins: IDEA CORE (211.7142.13), com.intellij.platform.images (211.7142.13), Subversion (211.7142.13), Machine Learning Code Completion (211.7142.13), Configuration Script (211.7142.13), Shared Indexes (211.7142.13), Shared Indexes for Python (211.7142.13), Copyright (211.7142.13), macOS Light Theme (211.7142.13), Windows 10 Light Theme (211.7142.13), JetBrains Marketplace (211.7142.13), Properties (211.7142.13), Task Management (211.7142.13), Mercurial (211.7142.13), EditorConfig (211.7142.13), Emoji Picker (211.7142.13), ReStructuredText (211.7142.13), Terminal (211.7142.13), Git (211.7142.13), ChangeReminder (211.7142.13), GitHub (211.7142.13), Code With Me (211.7142.13), Shell Script (211.7142.13), TextMate Bundles (211.7142.13), YAML (211.7142.13), Settings Repository (211.7142.13), IDE Features Trainer (211.7142.13), IntelliLang (211.7142.13), Markdown (211.7142.13), Grazie (211.7142.13), Python Community Edition (211.7142.13), PyCharm Community Customization (211.7142.13) 
+2024-10-11 15:36:37,603 [    936]   INFO - llij.ide.plugins.PluginManager - Loaded custom plugins: PyNose (1.0-SNAPSHOT) 
+2024-10-11 15:36:37,741 [   1074]   INFO - ntellij.idea.ApplicationLoader - CPU cores: 30; ForkJoinPool.commonPool: java.util.concurrent.ForkJoinPool@368fa3ea[Running, parallelism = 29, size = 0, active = 0, running = 0, steals = 0, tasks = 0, submissions = 0]; factory: com.intellij.concurrency.IdeaForkJoinWorkerThreadFactory@29e3ebcf 
+2024-10-11 15:36:37,857 [   1190]   INFO - ntellij.idea.ApplicationLoader - WM detected: GNOME Shell 
+2024-10-11 15:36:39,122 [   2455]   WARN - j.internal.DebugAttachDetector - Unable to start DebugAttachDetector, please add `--add-exports java.base/jdk.internal.vm=ALL-UNNAMED` to VM options 
+2024-10-11 15:36:39,249 [   2582]   INFO - m.intellij.util.io.StorageLock - lower=100; upper=492; buffer=10; max=492 
+2024-10-11 15:36:39,284 [   2617]   INFO - ication.options.PathMacrosImpl - Loaded path macros: {} 
+2024-10-11 15:36:39,290 [   2623]   INFO - tellij.util.io.FileChannelUtil - uninterruptible FileChannels will be used for indexes 
+2024-10-11 15:36:39,343 [   2676]   INFO - rains.ide.BuiltInServerManager - built-in server started, port 63343 
+2024-10-11 15:36:39,380 [   2713]   INFO - intellij.diagnostic.JitWatcher - JIT compilation state checking enabled 
+2024-10-11 15:36:39,690 [   3023]   INFO - til.net.ssl.CertificateManager - Default SSL context initialized 
+2024-10-11 15:36:39,760 [   3093]   INFO - ntellij.idea.ApplicationLoader - canDisableInputMethod spent 19 ms, found keyboard layouts: [(jp, xkb), (mozc-jp, ibus), ], result==false 
+2024-10-11 15:36:39,767 [   3100]   INFO - gs.impl.UpdateCheckerComponent - channel: release 
+2024-10-11 15:36:39,771 [   3104]   INFO - pl.local.NativeFileWatcherImpl - Starting file watcher: /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPC/2021.1.1/7e006ed9da260f8a5bf071cb7523e125f956f18a/pycharmPC-2021.1.1/bin/linux/fsnotifier64 
+2024-10-11 15:36:39,800 [   3133]   INFO - pl.local.NativeFileWatcherImpl - Native file watcher is operational. 
+2024-10-11 15:36:39,865 [   3198]   INFO - penapi.application.Experiments - Experimental features enabled for user: wsl.p9.support, wsl.prefer.p9.support, wsl.p9.show.roots.in.file.chooser, wsl.execute.with.wsl.exe, inline.browse.button, linux.native.menu, recent.and.edited.files.together, show.create.new.element.in.popup, search.everywhere.mixed.results, i18n.match.actions, editor.reader.mode, edit.run.configurations.while.dumb, new.large.text.file.viewer 
+2024-10-11 15:36:39,900 [   3233]   INFO - impl.SharedIndexMainZipStorage - Shared Indexes Storage is opened: <empty>, chunks: [] 
+2024-10-11 15:36:39,950 [   3283]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: com.intellij] 
+2024-10-11 15:36:39,958 [   3291]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: com.intellij] 
+2024-10-11 15:36:39,958 [   3291]   WARN - nSystem.impl.ActionManagerImpl - keymap "NetBeans 6.5" not found [Plugin: com.intellij] 
+2024-10-11 15:36:39,959 [   3292]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: com.intellij] 
+2024-10-11 15:36:40,065 [   3398]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: org.jetbrains.plugins.github] 
+2024-10-11 15:36:40,098 [   3431]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: PythonCore] 
+2024-10-11 15:36:40,099 [   3432]   WARN - nSystem.impl.ActionManagerImpl - keymap "NetBeans 6.5" not found [Plugin: PythonCore] 
+2024-10-11 15:36:40,213 [   3546]   INFO - penapi.wm.impl.GlobalMenuLinux - can't start main loop via JavaFX (will run it manually): com.sun.javafx.application.PlatformImpl 
+2024-10-11 15:36:40,237 [   3570]   INFO - penapi.application.Experiments - Experimental feature 'terminal.shell.command.handling' is now turned OFF 
+2024-10-11 15:36:40,866 [   4199]   INFO - leBasedIndexDataInitialization - Index data initialization done: 1166 ms. Initialized indexes: [FilenameIndex, filetypes, FrameworkDetectionIndex, TodoIndex, IdIndex, Trigram.Index, DomFileIndex, RelaxSymbolIndex, XmlTagNames, fileIncludes, XmlNamespaces, SchemaTypeInheritance, html5.custom.attributes.index, json.file.root.values, xmlProperties, editorconfig.index.name, Py.module.name, Py.setuptools.namespace, yaml.keys.name, Stubs]. 
+2024-10-11 15:36:40,887 [   4220]   INFO - exImpl$StubIndexInitialization - Index data initialization done: 20 ms. Initialized stub indexes: {Py.class.attributes, Py.function.shortName, properties.index, Py.class.shortName, Py.variable.shortName, Python.Decorator, Py.class.super, Py.class.shortNameInsensitive, Py.module.attribute, markdown.header, dom.elementClass, dom.namespaceKey}. 
+2024-10-11 15:36:47,097 [  10430]   INFO - packaging.PyPackageManagerImpl - Running packaging tool: /usr/bin/python3 /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPC/2021.1.1/7e006ed9da260f8a5bf071cb7523e125f956f18a/pycharmPC-2021.1.1/plugins/python-ce/helpers/packaging_tool.py list 
+2024-10-11 15:36:47,112 [  10445]   INFO - packaging.PyPackageManagerImpl - Running packaging tool: /usr/bin/python3 /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPC/2021.1.1/7e006ed9da260f8a5bf071cb7523e125f956f18a/pycharmPC-2021.1.1/plugins/python-ce/helpers/packaging_tool.py list 
+2024-10-11 15:36:48,781 [  12114]   INFO - hon.packaging.PyPIPackageCache - Loaded 535245 packages from /home/shupira/Documents/TestSmellResV6/testsmellresv6/PyNose-ASE2021/build/idea-sandbox/system/python_packages/pypi-cache.json 
+2024-10-11 15:37:01,690 [  25023]   INFO - ns.python.sdk.PythonSdkUpdater - Updating sys.path took 74 ms 
+2024-10-11 15:37:01,692 [  25025]   INFO - ns.python.sdk.PythonSdkUpdater - Bogus sys.path entry /usr/lib/python312.zip 
+2024-10-11 15:37:01,698 [  25031]   INFO - ns.python.sdk.PythonSdkUpdater - Binary skeletons directory for SDK Python 3.10 (2) (/usr/bin/python)): /home/shupira/Documents/TestSmellResV6/testsmellresv6/PyNose-ASE2021/build/idea-sandbox/system/python_stubs/348993582 
+2024-10-11 15:37:01,698 [  25031]   INFO - ns.python.sdk.PythonSdkUpdater - User skeletons directory for SDK Python 3.10 (2) (/usr/bin/python)): /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPC/2021.1.1/7e006ed9da260f8a5bf071cb7523e125f956f18a/pycharmPC-2021.1.1/plugins/python-ce/helpers/python-skeletons 
+2024-10-11 15:37:01,750 [  25083]   INFO - packaging.PyPackageManagerImpl - Running packaging tool: /usr/bin/python /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPC/2021.1.1/7e006ed9da260f8a5bf071cb7523e125f956f18a/pycharmPC-2021.1.1/plugins/python-ce/helpers/packaging_tool.py list 
+2024-10-11 15:37:01,750 [  25083]   INFO - packaging.PyPackageManagerImpl - Running packaging tool: /usr/bin/python /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPC/2021.1.1/7e006ed9da260f8a5bf071cb7523e125f956f18a/pycharmPC-2021.1.1/plugins/python-ce/helpers/packaging_tool.py list 
+2024-10-11 15:38:03,513 [  86846]   INFO - ns.python.sdk.PythonSdkUpdater - Updating sys.path took 40 ms 
+2024-10-11 15:38:03,514 [  86847]   INFO - ns.python.sdk.PythonSdkUpdater - Bogus sys.path entry /usr/lib/python312.zip 
+2024-10-11 15:38:03,520 [  86853]   INFO - ns.python.sdk.PythonSdkUpdater - Binary skeletons directory for SDK Python 3.10 (/usr/bin/python3.12)): /home/shupira/Documents/TestSmellResV6/testsmellresv6/PyNose-ASE2021/build/idea-sandbox/system/python_stubs/-32419094 
+2024-10-11 15:38:03,520 [  86853]   INFO - ns.python.sdk.PythonSdkUpdater - User skeletons directory for SDK Python 3.10 (/usr/bin/python3.12)): /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPC/2021.1.1/7e006ed9da260f8a5bf071cb7523e125f956f18a/pycharmPC-2021.1.1/plugins/python-ce/helpers/python-skeletons 
+2024-10-11 15:38:03,545 [  86878]   INFO - packaging.PyPackageManagerImpl - Running packaging tool: /usr/bin/python3.12 /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPC/2021.1.1/7e006ed9da260f8a5bf071cb7523e125f956f18a/pycharmPC-2021.1.1/plugins/python-ce/helpers/packaging_tool.py list 
+2024-10-11 15:38:03,545 [  86878]   INFO - packaging.PyPackageManagerImpl - Running packaging tool: /usr/bin/python3.12 /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPC/2021.1.1/7e006ed9da260f8a5bf071cb7523e125f956f18a/pycharmPC-2021.1.1/plugins/python-ce/helpers/packaging_tool.py list 
+2024-10-11 15:38:21,334 [ 104667]   INFO - erver.followMe.FollowMeManager - Register new user 0:'shupira' with ClientId=ClientId(value=Host) 
+2024-10-11 15:38:21,717 [ 105050]   INFO - ication.options.PathMacrosImpl - Saved path macros: {} 
+2024-10-11 15:38:21,718 [ 105051]   WARN - com.intellij.util.xmlb.Binding - no accessors for com.intellij.openapi.updateSettings.impl.pluginsAdvertisement.PluginAdvertiserExtensionsStateService$State 
+2024-10-11 15:38:21,746 [ 105079]   INFO - rationStore.ComponentStoreImpl - Saving appDaemonCodeAnalyzerSettings took 18 ms 
+2024-10-11 15:38:23,482 [ 106815]   INFO - rationStore.ComponentStoreImpl - Saving appInspectionProfileManager took 14 ms 
+2024-10-11 15:38:23,540 [ 106873]   INFO - pl.local.NativeFileWatcherImpl - Watcher terminated with exit code 0 
+2024-10-11 15:38:23,541 [ 106874]   INFO - .impl.FileTypeDetectionService - 1977 auto-detected files. Detection took 8866 ms 
+2024-10-11 15:38:23,545 [ 106878]   INFO - org.jetbrains.io.BuiltInServer - web server stopped 
+2024-10-11 15:38:23,608 [ 106941]   INFO - erver.followMe.FollowMeManager - Unregister user 0:'shupira' with ClientId=ClientId(value=Host) 
+2024-10-11 15:38:23,637 [ 106970]   INFO - il.indexing.FileBasedIndexImpl - START INDEX SHUTDOWN 
+2024-10-11 15:38:23,745 [ 107078]   INFO - tellij.psi.stubs.StubIndexImpl - StubIndexExtension-s were unloaded 
+2024-10-11 15:38:23,749 [ 107082]   INFO - il.indexing.FileBasedIndexImpl - END INDEX SHUTDOWN 
+2024-10-11 15:38:23,749 [ 107082]   INFO - newvfs.persistent.PersistentFS - VFS dispose started 
+2024-10-11 15:38:23,754 [ 107087]   INFO - newvfs.persistent.PersistentFS - VFS dispose completed 
+2024-10-11 15:38:23,755 [ 107088]   INFO - stubs.SerializationManagerImpl - Start shutting down /home/shupira/Documents/TestSmellResV6/testsmellresv6/PyNose-ASE2021/build/idea-sandbox/system/index/rep.names 
+2024-10-11 15:38:23,757 [ 107090]   INFO - stubs.SerializationManagerImpl - Finished shutting down /home/shupira/Documents/TestSmellResV6/testsmellresv6/PyNose-ASE2021/build/idea-sandbox/system/index/rep.names 
+2024-10-11 15:38:23,769 [ 107102]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE SHUTDOWN ------------------------------------------------------ 
+2024-10-11 15:38:23,771 [ 107104]   INFO - org.jetbrains.io.BuiltInServer - web server stopped 
+2024-10-26 21:05:37,847 [      0]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE STARTED ------------------------------------------------------ 
+2024-10-26 21:05:37,859 [     12]   INFO - llij.ide.gdpr.EndUserAgreement - euaCommunity: /home/shupira/.local/share/JetBrains/PrivacyPolicy/euaCommunity.cached 
+2024-10-26 21:05:37,935 [     88]   INFO -        #com.intellij.idea.Main - IDE: PyCharm (build #PC-211.7142.13, 21 Apr 2021 17:35) 
+2024-10-26 21:05:37,938 [     91]   INFO -        #com.intellij.idea.Main - OS: Linux (6.5.0-44-generic, amd64) 
+2024-10-26 21:05:37,970 [    123]   INFO -        #com.intellij.idea.Main - JRE: 11.0.10+9-b1341.41 (JetBrains s.r.o.) 
+2024-10-26 21:05:37,971 [    124]   INFO -        #com.intellij.idea.Main - JVM: 11.0.10+9-b1341.41 (OpenJDK 64-Bit Server VM) 
+2024-10-26 21:05:37,972 [    125]   INFO -        #com.intellij.idea.Main - JVM Args: -Didea.auto.reload.plugins=true -Didea.classpath.index.enabled=false -Didea.config.path=/home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/config -Didea.is.internal=true -Didea.platform.prefix=PyCharmCore -Didea.plugins.path=/home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/plugins -Didea.required.plugins.id=pynose.PyNose -Didea.system.path=/home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/system -Dsun.awt.disablegrab=true -Xms256m -Xmx512m -Dfile.encoding=UTF-8 -Duser.country=JP -Duser.language=ja -Duser.variant -ea 
+2024-10-26 21:05:37,973 [    126]   INFO -        #com.intellij.idea.Main - library path: /usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib 
+2024-10-26 21:05:37,974 [    127]   INFO -        #com.intellij.idea.Main - boot library path: /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains/jbre/jbr_jcef-11_0_10-linux-x64-b1341.41/jbr/lib 
+2024-10-26 21:05:38,066 [    219]   INFO -        #com.intellij.idea.Main - locale=ja_JP JNU=UTF-8 file.encoding=UTF-8
+  idea.config.path=/home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/config
+  idea.system.path=/home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/system
+  idea.plugins.path=/home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/plugins
+  idea.log.path=/home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/system/log 
+2024-10-26 21:05:38,196 [    349]   INFO -        #com.intellij.idea.Main - JNA library (64-bit) loaded in 91 ms 
+2024-10-26 21:05:38,474 [    627]   WARN - llij.ide.plugins.PluginManager - Resource bundle redefinition for plugin 'com.jetbrains.pycharm.community.customization'. Old value: messages.ActionsBundle, new value: messages.PyBundle 
+2024-10-26 21:05:38,870 [   1023]   INFO - llij.ide.plugins.PluginManager - Loaded bundled plugins: IDEA CORE (211.7142.13), com.intellij.platform.images (211.7142.13), Subversion (211.7142.13), Machine Learning Code Completion (211.7142.13), Configuration Script (211.7142.13), Shared Indexes (211.7142.13), Shared Indexes for Python (211.7142.13), Copyright (211.7142.13), macOS Light Theme (211.7142.13), Windows 10 Light Theme (211.7142.13), JetBrains Marketplace (211.7142.13), Properties (211.7142.13), Task Management (211.7142.13), Mercurial (211.7142.13), EditorConfig (211.7142.13), Emoji Picker (211.7142.13), ReStructuredText (211.7142.13), Terminal (211.7142.13), Git (211.7142.13), ChangeReminder (211.7142.13), GitHub (211.7142.13), Code With Me (211.7142.13), Shell Script (211.7142.13), TextMate Bundles (211.7142.13), YAML (211.7142.13), Settings Repository (211.7142.13), IDE Features Trainer (211.7142.13), IntelliLang (211.7142.13), Markdown (211.7142.13), Grazie (211.7142.13), Python Community Edition (211.7142.13), PyCharm Community Customization (211.7142.13) 
+2024-10-26 21:05:38,870 [   1023]   INFO - llij.ide.plugins.PluginManager - Loaded custom plugins: PyNose (1.0-SNAPSHOT) 
+2024-10-26 21:05:39,890 [   2043]   INFO - ntellij.idea.ApplicationLoader - CPU cores: 56; ForkJoinPool.commonPool: java.util.concurrent.ForkJoinPool@59e77f3f[Running, parallelism = 55, size = 0, active = 0, running = 0, steals = 0, tasks = 0, submissions = 0]; factory: com.intellij.concurrency.IdeaForkJoinWorkerThreadFactory@16657706 
+2024-10-26 21:05:40,045 [   2198]   INFO - ntellij.idea.ApplicationLoader - WM detected: GNOME Shell 
+2024-10-26 21:05:41,313 [   3466]   WARN - j.internal.DebugAttachDetector - Unable to start DebugAttachDetector, please add `--add-exports java.base/jdk.internal.vm=ALL-UNNAMED` to VM options 
+2024-10-26 21:05:41,459 [   3612]   INFO - m.intellij.util.io.StorageLock - lower=100; upper=492; buffer=10; max=492 
+2024-10-26 21:05:41,459 [   3612]   INFO - ication.options.PathMacrosImpl - Loaded path macros: {} 
+2024-10-26 21:05:41,505 [   3658]   INFO - tellij.util.io.FileChannelUtil - uninterruptible FileChannels will be used for indexes 
+2024-10-26 21:05:41,511 [   3664]   INFO - rains.ide.BuiltInServerManager - built-in server started, port 63343 
+2024-10-26 21:05:41,548 [   3701]   INFO - intellij.diagnostic.JitWatcher - JIT compilation state checking enabled 
+2024-10-26 21:05:41,871 [   4024]   INFO - til.net.ssl.CertificateManager - Default SSL context initialized 
+2024-10-26 21:05:42,048 [   4201]   INFO - pl.local.NativeFileWatcherImpl - Starting file watcher: /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPC/2021.1.1/7e006ed9da260f8a5bf071cb7523e125f956f18a/pycharmPC-2021.1.1/bin/linux/fsnotifier64 
+2024-10-26 21:05:42,073 [   4226]   INFO - ntellij.idea.ApplicationLoader - canDisableInputMethod spent 50 ms, found keyboard layouts: [(jp, xkb), (mozc-jp, ibus), ], result==false 
+2024-10-26 21:05:42,078 [   4231]   INFO - gs.impl.UpdateCheckerComponent - channel: release 
+2024-10-26 21:05:42,095 [   4248]   INFO - pl.local.NativeFileWatcherImpl - Native file watcher is operational. 
+2024-10-26 21:05:42,217 [   4370]   INFO - penapi.application.Experiments - Experimental features enabled for user: wsl.p9.support, wsl.prefer.p9.support, wsl.p9.show.roots.in.file.chooser, wsl.execute.with.wsl.exe, inline.browse.button, linux.native.menu, recent.and.edited.files.together, show.create.new.element.in.popup, search.everywhere.mixed.results, i18n.match.actions, editor.reader.mode, edit.run.configurations.while.dumb, new.large.text.file.viewer 
+2024-10-26 21:05:42,256 [   4409]   INFO - impl.SharedIndexMainZipStorage - Shared Indexes Storage is opened: <empty>, chunks: [] 
+2024-10-26 21:05:42,320 [   4473]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: com.intellij] 
+2024-10-26 21:05:42,332 [   4485]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: com.intellij] 
+2024-10-26 21:05:42,332 [   4485]   WARN - nSystem.impl.ActionManagerImpl - keymap "NetBeans 6.5" not found [Plugin: com.intellij] 
+2024-10-26 21:05:42,332 [   4485]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: com.intellij] 
+2024-10-26 21:05:42,467 [   4620]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: org.jetbrains.plugins.github] 
+2024-10-26 21:05:42,505 [   4658]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: PythonCore] 
+2024-10-26 21:05:42,506 [   4659]   WARN - nSystem.impl.ActionManagerImpl - keymap "NetBeans 6.5" not found [Plugin: PythonCore] 
+2024-10-26 21:05:42,640 [   4793]   INFO - penapi.wm.impl.GlobalMenuLinux - can't start main loop via JavaFX (will run it manually): com.sun.javafx.application.PlatformImpl 
+2024-10-26 21:05:42,662 [   4815]   INFO - penapi.application.Experiments - Experimental feature 'terminal.shell.command.handling' is now turned OFF 
+2024-10-26 21:05:43,527 [   5680]   INFO - leBasedIndexDataInitialization - Index data initialization done: 1603 ms. Initialized indexes: [FilenameIndex, filetypes, IdIndex, FrameworkDetectionIndex, TodoIndex, Trigram.Index, DomFileIndex, RelaxSymbolIndex, XmlTagNames, fileIncludes, XmlNamespaces, html5.custom.attributes.index, SchemaTypeInheritance, json.file.root.values, editorconfig.index.name, xmlProperties, Py.module.name, Py.setuptools.namespace, yaml.keys.name, Stubs]. 
+2024-10-26 21:05:43,542 [   5695]   INFO - exImpl$StubIndexInitialization - Index data initialization done: 14 ms. Initialized stub indexes: {Py.class.attributes, Py.function.shortName, properties.index, Py.class.shortName, Py.variable.shortName, Python.Decorator, Py.class.super, Py.class.shortNameInsensitive, Py.module.attribute, markdown.header, dom.elementClass, dom.namespaceKey}. 
+2024-10-26 21:05:51,582 [  13735]   INFO - packaging.PyPackageManagerImpl - Running packaging tool: /usr/bin/python3.12 /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPC/2021.1.1/7e006ed9da260f8a5bf071cb7523e125f956f18a/pycharmPC-2021.1.1/plugins/python-ce/helpers/packaging_tool.py list 
+2024-10-26 21:05:51,594 [  13747]   INFO - packaging.PyPackageManagerImpl - Running packaging tool: /usr/bin/python3.12 /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPC/2021.1.1/7e006ed9da260f8a5bf071cb7523e125f956f18a/pycharmPC-2021.1.1/plugins/python-ce/helpers/packaging_tool.py list 
+2024-10-26 21:05:51,597 [  13750]   WARN - ckaging.InstalledPackagesPanel - com.intellij.execution.process.ProcessNotCreatedException: Cannot run program "/usr/bin/python3.12" (in directory "/usr/bin"): error=2, そのようなファイルやディレクトリはありません 
+2024-10-26 21:05:52,806 [  14959]   INFO - hon.packaging.PyPIPackageCache - Loaded 535245 packages from /home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/system/python_packages/pypi-cache.json 
+2024-10-26 21:06:14,714 [  36867]   INFO - ns.python.sdk.PythonSdkUpdater - Updating sys.path took 186 ms 
+2024-10-26 21:06:14,720 [  36873]   INFO - ns.python.sdk.PythonSdkUpdater - Bogus sys.path entry /usr/lib/python310.zip 
+2024-10-26 21:06:14,750 [  36903]   INFO - ns.python.sdk.PythonSdkUpdater - Binary skeletons directory for SDK Python 3.10 (2) (/usr/bin/python3)): /home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/system/python_stubs/-2066100795 
+2024-10-26 21:06:14,751 [  36904]   INFO - ns.python.sdk.PythonSdkUpdater - User skeletons directory for SDK Python 3.10 (2) (/usr/bin/python3)): /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPC/2021.1.1/7e006ed9da260f8a5bf071cb7523e125f956f18a/pycharmPC-2021.1.1/plugins/python-ce/helpers/python-skeletons 
+2024-10-26 21:06:14,820 [  36973]   INFO - packaging.PyPackageManagerImpl - Running packaging tool: /usr/bin/python3 /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPC/2021.1.1/7e006ed9da260f8a5bf071cb7523e125f956f18a/pycharmPC-2021.1.1/plugins/python-ce/helpers/packaging_tool.py list 
+2024-10-26 21:06:14,823 [  36976]   INFO - packaging.PyPackageManagerImpl - Running packaging tool: /usr/bin/python3 /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPC/2021.1.1/7e006ed9da260f8a5bf071cb7523e125f956f18a/pycharmPC-2021.1.1/plugins/python-ce/helpers/packaging_tool.py list 
+2024-10-26 21:06:21,717 [  43870]   INFO - ns.python.sdk.PythonSdkUpdater - Updating sys.path took 57 ms 
+2024-10-26 21:06:21,724 [  43877]   INFO - ns.python.sdk.PythonSdkUpdater - Bogus sys.path entry /usr/lib/python310.zip 
+2024-10-26 21:06:21,728 [  43881]   INFO - ns.python.sdk.PythonSdkUpdater - Binary skeletons directory for SDK Python 3.10 (2) (/usr/bin/python3)): /home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/system/python_stubs/-2066100795 
+2024-10-26 21:06:21,728 [  43881]   INFO - ns.python.sdk.PythonSdkUpdater - User skeletons directory for SDK Python 3.10 (2) (/usr/bin/python3)): /home/shupira/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPC/2021.1.1/7e006ed9da260f8a5bf071cb7523e125f956f18a/pycharmPC-2021.1.1/plugins/python-ce/helpers/python-skeletons 
+2024-10-26 21:06:25,554 [  47707]   INFO - erver.followMe.FollowMeManager - Register new user 0:'shupira' with ClientId=ClientId(value=Host) 
+2024-10-26 21:06:25,913 [  48066]   INFO - ication.options.PathMacrosImpl - Saved path macros: {} 
+2024-10-26 21:06:25,915 [  48068]   WARN - com.intellij.util.xmlb.Binding - no accessors for com.intellij.openapi.updateSettings.impl.pluginsAdvertisement.PluginAdvertiserExtensionsStateService$State 
+2024-10-26 21:06:25,940 [  48093]   INFO - rationStore.ComponentStoreImpl - Saving appCodeInsightSettings took 33 ms, DaemonCodeAnalyzerSettings took 16 ms 
+2024-10-26 21:06:25,983 [  48136]   INFO - rationStore.ComponentStoreImpl - Saving default projectHgUpdateConfigurationSettings took 20 ms 
+2024-10-26 21:06:27,649 [  49802]   INFO - rationStore.ComponentStoreImpl - Saving appInspectionProfileManager took 13 ms 
+2024-10-26 21:06:27,741 [  49894]   INFO - pl.local.NativeFileWatcherImpl - Watcher terminated with exit code 0 
+2024-10-26 21:06:27,743 [  49896]   INFO - .impl.FileTypeDetectionService - 0 auto-detected files. Detection took 0 ms 
+2024-10-26 21:06:27,747 [  49900]   INFO - org.jetbrains.io.BuiltInServer - web server stopped 
+2024-10-26 21:06:27,847 [  50000]   INFO - erver.followMe.FollowMeManager - Unregister user 0:'shupira' with ClientId=ClientId(value=Host) 
+2024-10-26 21:06:27,873 [  50026]   INFO - il.indexing.FileBasedIndexImpl - START INDEX SHUTDOWN 
+2024-10-26 21:06:28,219 [  50372]   INFO - tellij.psi.stubs.StubIndexImpl - StubIndexExtension-s were unloaded 
+2024-10-26 21:06:28,223 [  50376]   INFO - il.indexing.FileBasedIndexImpl - END INDEX SHUTDOWN 
+2024-10-26 21:06:28,223 [  50376]   INFO - newvfs.persistent.PersistentFS - VFS dispose started 
+2024-10-26 21:06:28,229 [  50382]   INFO - newvfs.persistent.PersistentFS - VFS dispose completed 
+2024-10-26 21:06:28,230 [  50383]   INFO - stubs.SerializationManagerImpl - Start shutting down /home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/system/index/rep.names 
+2024-10-26 21:06:28,231 [  50384]   INFO - stubs.SerializationManagerImpl - Finished shutting down /home/shupira/Documents/TestSmellRes/src/PyNose-ASE2021/build/idea-sandbox/system/index/rep.names 
+2024-10-26 21:06:28,249 [  50402]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE SHUTDOWN ------------------------------------------------------ 
+2024-10-26 21:06:28,255 [  50408]   INFO - org.jetbrains.io.BuiltInServer - web server stopped 
