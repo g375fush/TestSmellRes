@@ -18,10 +18,11 @@ def main():
     target_list = list(Path('../repo').resolve(strict=True).glob('*'))
     target_list.sort()
     for repo_prefix in target_list:
-        pynose_instance_path = Path(f'../{repo_prefix.stem}_PyNose')
+        pynose_instance_path = Path(f'../{repo_prefix.stem}_PyNose').resolve()
         shutil.copytree(runner_path.parent, pynose_instance_path)
 
-        result_dir = Path(f'../result/{this_file_name}/{repo_prefix.stem}')
+        result_dir \
+            = Path(f'../result/{this_file_name}/{repo_prefix.stem}').resolve()
         result_dir.mkdir(exist_ok=True, parents=True)
         pynose_executor = PyNoseExecutor(
             runner_path=pynose_instance_path/'runner.py',
