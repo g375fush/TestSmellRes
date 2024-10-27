@@ -14,11 +14,20 @@ def main():
     リポジトリのコミットごとに PyNose を実行する．
     ただし，あらかじめクローンされているリポジトリを対象とする．
     """
+    start = int(input('start:'))
+    end = int(input('end:'))
+
     this_file_name = Path(__file__).stem
     target_list = list(Path('../repo').resolve(strict=True).glob('*'))
     target_list.sort()
     for repo_prefix in target_list:
+        prefix_number = int(repo_prefix[1:5])
+        if not start <= prefix_number <= end:
+            continue
+
         pynose_instance_path = Path(f'../{repo_prefix.stem}_PyNose').resolve()
+        if pynose_instance_path.exists():
+            shutil.rmtree(pynose_instance_path)
         shutil.copytree(runner_path.parent, pynose_instance_path)
 
         result_dir \
@@ -38,7 +47,12 @@ def main():
         for index, commit_hash in enumerate(commit_hashes, 1):
             repo.checkout(commit_hash)
 
-            pynose_executor.execute_pynose()
+            try:
+                pynose_executor.execute_pynose()
+            except KeyboardInterrupt:
+                shutil.rmtree(pynose_instance_path)
+            else:
+                print(f'{repo_prefix} {index}/{len(commit_hashes)}')
 
             default_result_file_path = result_dir / f'{repo_name}.json'
             default_log_file_path = result_dir / 'log.txt'
