@@ -44,7 +44,18 @@ def main():
         repo = Repo(repo_path)
 
         commit_hashes = repo.get_commit_hashes(until=deadline)
+        default_result_file_path = result_dir / f'{repo_name}.json'
+        default_log_file_path = result_dir / 'log.txt'
         for index, commit_hash in enumerate(commit_hashes, 1):
+            result_file_name = f'{repo_name}_{index:06d}_{commit_hash}.json'
+            log_file_name = f'{repo_name}_{index:06d}_{commit_hash}.txt'
+
+            result_file_path = result_dir / result_file_name
+            log_file_path = result_dir / log_file_name
+            if already_analyzed(result_file_path):
+                print(f'skip {commit_hash}')
+                continue
+
             repo.checkout(commit_hash)
 
             try:
@@ -54,19 +65,19 @@ def main():
             else:
                 print(f'{repo_prefix} {index}/{len(commit_hashes)}')
 
-            default_result_file_path = result_dir / f'{repo_name}.json'
-            default_log_file_path = result_dir / 'log.txt'
-
-            result_file_name = f'{repo_name}_{index:06d}_{commit_hash}.json'
-            log_file_name = f'{repo_name}_{index:06d}_{commit_hash}.txt'
-
-            result_file_path = result_dir / result_file_name
-            log_file_path = result_dir / log_file_name
-
             default_result_file_path.rename(result_file_path)
             default_log_file_path.rename(log_file_path)
 
         shutil.rmtree(pynose_instance_path)
+
+
+def already_analyzed(file_path: Path):
+    """
+    すでにファイルが存在しているならば解析済みである．
+    :param file_path: 結果のファイルパス．
+    :return: file_path が存在しているかどうか．
+    """
+    return file_path.exists()
 
 
 if __name__ == '__main__':
