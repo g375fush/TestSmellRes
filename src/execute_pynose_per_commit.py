@@ -1,6 +1,7 @@
 """
 PyNose をコミットごとに実行するプログラム．
 """
+import shutil
 from pathlib import Path
 
 from global_var import deadline, runner_path
@@ -17,11 +18,16 @@ def main():
     target_list = list(Path('../repo').resolve(strict=True).glob('*'))
     target_list.sort()
     for repo_prefix in target_list:
-        result_dir = Path(f'../result/{this_file_name}/{repo_prefix}')
+        pynose_instance_path = Path(f'../{repo_prefix.stem}_PyNose')
+        shutil.copytree(runner_path.parent, pynose_instance_path)
+
+        result_dir = Path(f'../result/{this_file_name}/{repo_prefix.stem}')
         result_dir.mkdir(exist_ok=True, parents=True)
-        pynose_executor = PyNoseExecutor(runner_path=runner_path,
-                                         result_dir=result_dir,
-                                         repo_prefix=repo_prefix)
+        pynose_executor = PyNoseExecutor(
+            runner_path=pynose_instance_path/'runner.py',
+            result_dir=result_dir,
+            repo_prefix=repo_prefix
+        )
 
         repo_name = repo_prefix.glob('*').__next__()
         repo_path = repo_prefix / repo_name
@@ -30,12 +36,17 @@ def main():
         commit_hashes = repo.get_commit_hashes(until=deadline)
         for index, commit_hash in enumerate(commit_hashes, 1):
             repo.checkout(commit_hash)
+
             pynose_executor.execute_pynose()
+
             default_file_name = f'{repo_name}.json'
             result_file_name = f'{repo_name}_{index:06d}_{commit_hash}.json'
             result_dir.joinpath(default_file_name).rename(result_file_name)
 
-        result_dir.joinpath('log.txt').unlink()
+            log_file_name = f'{repo_name}_{index:06d}_{commit_hash}.txt'
+            result_dir.joinpath('log.txt').rename(log_file_name)
+
+        shutil.rmtree(pynose_instance_path)
 
 
 if __name__ == '__main__':
