@@ -30,7 +30,7 @@ def main():
             repo_prefix=repo_prefix
         )
 
-        repo_name = repo_prefix.glob('*').__next__()
+        repo_name = repo_prefix.glob('*').__next__().stem
         repo_path = repo_prefix / repo_name
         repo = Repo(repo_path)
 
