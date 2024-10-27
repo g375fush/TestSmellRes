@@ -23,7 +23,7 @@ class Repo:
         :param until: どの時点までのコミットハッシュを取得するか．デフォルトは最新まで．
         :return: コミットハッシュのリスト．
         """
-        commits = self._repo.iter_commits(reverse=True, until=until)
+        commits = self._repo.iter_commits(reverse=True, until=until, all=True)
         return [commit.hexsha for commit in commits]
 
     def get_commit_messages(self, until: Optional[datetime] = None) -> list:
@@ -33,7 +33,7 @@ class Repo:
         :param until: どの時点までのコミットメッセージを取得するか．デフォルトは最新まで．
         :return: コミットメッセージのリスト．
         """
-        commits = self._repo.iter_commits(reverse=True, until=until)
+        commits = self._repo.iter_commits(reverse=True, until=until, all=True)
         return [commit.message for commit in commits]
 
     def checkout(self, commit_hash: str) -> None:
