@@ -40,12 +40,17 @@ def main():
 
             pynose_executor.execute_pynose()
 
-            default_file_name = f'{repo_name}.json'
-            result_file_name = f'{repo_name}_{index:06d}_{commit_hash}.json'
-            result_dir.joinpath(default_file_name).rename(result_file_name)
+            default_result_file_path = result_dir / f'{repo_name}.json'
+            default_log_file_path = result_dir / 'log.txt'
 
+            result_file_name = f'{repo_name}_{index:06d}_{commit_hash}.json'
             log_file_name = f'{repo_name}_{index:06d}_{commit_hash}.txt'
-            result_dir.joinpath('log.txt').rename(log_file_name)
+
+            result_file_path = result_dir / result_file_name
+            log_file_path = result_dir / log_file_name
+
+            default_result_file_path.rename(result_file_path)
+            default_log_file_path.rename(log_file_path)
 
         shutil.rmtree(pynose_instance_path)
 
