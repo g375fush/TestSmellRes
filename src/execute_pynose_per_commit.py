@@ -2,6 +2,7 @@
 PyNose をコミットごとに実行するプログラム．
 """
 import shutil
+import time
 from pathlib import Path
 
 from global_var import deadline, runner_path
@@ -61,9 +62,13 @@ def main():
             try:
                 pynose_executor.execute_pynose()
             except KeyboardInterrupt:
-                shutil.rmtree(pynose_instance_path)
+                try:
+                    shutil.rmtree(pynose_instance_path)
+                except FileNotFoundError:
+                    time.sleep(1)
+                    shutil.rmtree(pynose_instance_path)
             else:
-                print(f'{repo_prefix} {index}/{len(commit_hashes)}')
+                print(f'{repo_name} {index}/{len(commit_hashes)}')
 
             default_result_file_path.rename(result_file_path)
             default_log_file_path.rename(log_file_path)
