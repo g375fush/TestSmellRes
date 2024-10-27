@@ -5,9 +5,9 @@ from pathlib import Path
 
 import tqdm
 
-DETECTOR_OUTPUT = Path(sys.argv[1])
-PLUGIN_ROOT = Path(sys.argv[0]).parent
-REPO_PREFIX = Path(sys.argv[2])
+DETECTOR_OUTPUT = Path(sys.argv[1]).resolve(strict=True)
+PLUGIN_ROOT = Path(sys.argv[0]).parent.resolve(strict=True)
+REPO_PREFIX = Path(sys.argv[2]).resolve(strict=True)
 PYTHON_INTERPRETER_NAME = 'Python 3.10'
 
 PROJECT_LIST = [p for p in REPO_PREFIX.iterdir() if p.is_dir()]
