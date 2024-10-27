@@ -22,7 +22,7 @@ def main():
     target_list = list(Path('../repo').resolve(strict=True).glob('*'))
     target_list.sort()
     for repo_prefix in target_list:
-        prefix_number = int(repo_prefix[1:5])
+        prefix_number = int(repo_prefix.stem[1:5])
         if not start <= prefix_number <= end:
             continue
 
