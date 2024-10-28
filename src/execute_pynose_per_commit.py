@@ -74,7 +74,8 @@ def main():
             default_result_file_path.rename(result_file_path)
             default_log_file_path.rename(log_file_path)
 
-        shutil.rmtree(pynose_instance_path)
+        if pynose_instance_path.exists():
+            shutil.rmtree(pynose_instance_path)
 
 
 def already_analyzed(file_path: Path):
