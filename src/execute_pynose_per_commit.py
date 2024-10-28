@@ -67,6 +67,9 @@ def main():
                 except FileNotFoundError:
                     time.sleep(1)
                     shutil.rmtree(pynose_instance_path)
+                except OSError:
+                    time.sleep(1)
+                    shutil.rmtree(pynose_instance_path)
                 break
             else:
                 print(f'{repo_name} {index}/{len(commit_hashes)}')
