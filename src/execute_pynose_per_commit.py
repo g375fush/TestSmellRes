@@ -31,18 +31,18 @@ def main():
             shutil.rmtree(pynose_instance_path)
         shutil.copytree(runner_path.parent, pynose_instance_path)
 
-        result_dir \
-            = Path(f'../result/{this_file_name}/{repo_prefix.stem}').resolve()
-        result_dir.mkdir(exist_ok=True, parents=True)
-        pynose_executor = PyNoseExecutor(
-            runner_path=pynose_instance_path/'runner.py',
-            result_dir=result_dir,
-            repo_prefix=repo_prefix
-        )
-
         repo_name = repo_prefix.glob('*').__next__().stem
         repo_path = repo_prefix / repo_name
         repo = Repo(repo_path)
+
+        result_dir \
+            = Path(f'../result/{this_file_name}/{repo_name}').resolve()
+        result_dir.mkdir(exist_ok=True, parents=True)
+        pynose_executor = PyNoseExecutor(
+            runner_path=pynose_instance_path / 'runner.py',
+            result_dir=result_dir,
+            repo_prefix=repo_prefix
+        )
 
         commit_hashes = repo.get_commit_hashes(until=deadline)
         default_result_file_path = result_dir / f'{repo_name}.json'
