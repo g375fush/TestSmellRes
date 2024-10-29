@@ -2,6 +2,7 @@
 PyNose をコミットごとに実行するプログラム．
 """
 import shutil
+import sys
 import time
 from pathlib import Path
 
@@ -70,7 +71,7 @@ def main():
                 except OSError:
                     time.sleep(1)
                     shutil.rmtree(pynose_instance_path)
-                break
+                    sys.exit(0)
             else:
                 print(f'{repo_name} {index}/{len(commit_hashes)}')
 
