@@ -34,7 +34,11 @@ def main():
             shutil.rmtree(pynose_instance_path)
         shutil.copytree(runner_path.parent, pynose_instance_path)
 
-        repo_name = repo_prefix.glob('*').__next__().stem
+        try:
+            repo_name = repo_prefix.glob('*').__next__().stem
+        except StopIteration:
+            shutil.rmtree(pynose_instance_path)
+            continue
         repo_path = repo_prefix / repo_name
         repo = Repo(repo_path)
 
