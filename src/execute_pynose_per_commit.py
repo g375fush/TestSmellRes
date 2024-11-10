@@ -74,20 +74,20 @@ def main():
             try:
                 pynose_executor.execute_pynose()
             except KeyboardInterrupt:
-                try:
-                    shutil.rmtree(pynose_instance_path)
-                except FileNotFoundError:
-                    time.sleep(1)
-                    shutil.rmtree(pynose_instance_path)
-                except OSError:
-                    time.sleep(1)
-                    shutil.rmtree(pynose_instance_path)
-                    sys.exit(0)
+                remove_pynose_dir(pynose_instance_path)
+                sys.exit(0)
+            except TimeoutError:
+                remove_pynose_dir(pynose_instance_path)
+                break
             else:
                 print(f'{repo_name} {index}/{len(commit_hashes)}')
 
-            default_result_file_path.rename(result_file_path)
-            default_log_file_path.rename(log_file_path)
+            try:
+                default_result_file_path.rename(result_file_path)
+                default_log_file_path.rename(log_file_path)
+            except FileNotFoundError:
+                print('PyNose did not output result file')
+                continue
 
         if pynose_instance_path.exists():
             shutil.rmtree(pynose_instance_path)
@@ -100,6 +100,21 @@ def already_analyzed(file_path: Path):
     :return: file_path が存在しているかどうか．
     """
     return file_path.exists()
+
+
+def remove_pynose_dir(dir_path: Path):
+    """
+    PyNose を削除しようと試みる．
+    :param dir_path: PyNose へのパス．
+    """
+    try:
+        shutil.rmtree(dir_path)
+    except FileNotFoundError:
+        time.sleep(1)
+        shutil.rmtree(dir_path)
+    except OSError:
+        time.sleep(1)
+        shutil.rmtree(dir_path)
 
 
 if __name__ == '__main__':

@@ -41,7 +41,10 @@ class PyNoseExecutor:
         ]
 
         try:
-            run(cmd, check=True)
+            run(cmd, check=True, timeout=300)
         except subprocess.CalledProcessError:
             print('Failed to execute PyNose')
             raise
+        except subprocess.TimeoutExpired:
+            print('Time out')
+            raise TimeoutError
