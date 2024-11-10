@@ -110,10 +110,10 @@ def remove_pynose_dir(dir_path: Path):
     try:
         shutil.rmtree(dir_path)
     except FileNotFoundError:
-        time.sleep(1)
+        time.sleep(3)
         shutil.rmtree(dir_path)
     except OSError:
-        time.sleep(1)
+        time.sleep(3)
         shutil.rmtree(dir_path)
 
 
