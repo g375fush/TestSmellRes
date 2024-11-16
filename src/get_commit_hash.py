@@ -1,7 +1,7 @@
 """
 解析対象のコミットハッシュを固定するために csv に記録する．
 """
-import csv
+import json
 from pathlib import Path
 
 import git.exc
@@ -10,8 +10,8 @@ from tqdm import tqdm
 from global_var import deadline
 from repo import Repo
 
-all_commit_hashes = []
 
+this_file_name = Path(__file__).stem
 target_list = list(Path('../repo').resolve(strict=True).glob('*'))
 target_list.sort()
 for repo_prefix in tqdm(target_list):
@@ -22,10 +22,10 @@ for repo_prefix in tqdm(target_list):
         repo.checkout_head_commit()
     except git.exc.GitCommandError:
         continue
-    commit_hashes = repo.get_commit_hashes(until=deadline)
-    all_commit_hashes.append([repo_name] + commit_hashes)
 
-with Path('../result/commit_hashes.csv').open('w', encoding='utf-8-sig',
-                                              newline='') as f:
-    writer = csv.writer(f)
-    writer.writerows(all_commit_hashes)
+    commit_hashes = repo.get_commit_hashes(until=deadline)
+    result_dir = Path(f'../result/{this_file_name}')
+    result_dir.mkdir(exist_ok=True)
+    result_file_path = result_dir / f'{repo_name}.json'
+    with result_file_path.open('w', encoding='utf-8-sig') as f:
+        json.dump(commit_hashes, f)
