@@ -6,8 +6,6 @@ import sys
 import time
 from pathlib import Path
 
-import git.exc
-
 from global_var import deadline, runner_path
 from pynose_executor import PyNoseExecutor
 from repo import Repo
@@ -41,11 +39,6 @@ def main():
             continue
         repo_path = repo_prefix / repo_name
         repo = Repo(repo_path)
-
-        try:
-            repo.checkout_head_commit()
-        except git.exc.GitCommandError:
-            continue
 
         result_dir \
             = Path(f'../result/{this_file_name}/{repo_name}').resolve()
