@@ -11,6 +11,8 @@ class PyNoseExecutor:
     本来はコマンドラインから操作しなければならないが，
     その操作を勝手に行ってくれるクラス．
     """
+    timeout = 3600
+
     def __init__(self, runner_path: Path, result_dir: Path, repo_prefix: Path):
         """
         :param runner_path: runner.py のパス．
@@ -41,7 +43,7 @@ class PyNoseExecutor:
         ]
 
         try:
-            run(cmd, check=True, timeout=300)
+            run(cmd, check=True, timeout=self.timeout)
         except subprocess.CalledProcessError:
             print('Failed to execute PyNose')
             raise
