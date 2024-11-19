@@ -29,6 +29,8 @@ for index, url in enumerate(url_list, start=1):
     print(f'Cloning {clone_name} ...')
     try:
         git.Repo.clone_from(url=url, to_path=clone_path)
-    except git.GitCommandError:
+    except git.GitCommandError as e:
         print(f'failed to clone {clone_name} ...')
+        print(f'due to: {e.stderr}')
+        continue
     print(f'Cloned {clone_name} !!!')
