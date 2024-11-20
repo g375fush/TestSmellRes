@@ -70,8 +70,7 @@ def main():
                 remove_pynose_dir(pynose_instance_path)
                 sys.exit(0)
             except TimeoutError:
-                remove_pynose_dir(pynose_instance_path)
-                break
+                continue
             else:
                 print(f'{repo_name} {index}/{len(commit_hashes)}')
 
