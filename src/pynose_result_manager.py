@@ -11,8 +11,13 @@ class PyNoseResultManager:
     json 形式で出力される PyNose の結果を扱いやすく加工してくれるクラス．
     """
     def __init__(self, path: Path):
-        with path.open() as f:
-            self.original_data = json.load(f)
+        try:
+            with path.open() as f:
+                self.original_data = json.load(f)
+        except json.decoder.JSONDecodeError as e:
+            print(e.msg)
+            print(f'failed to decode JSON file : {path.as_posix()}')
+            raise
 
     def count_test_smells_per_file(self) -> dict:
         """
