@@ -4,7 +4,6 @@
 import json
 from pathlib import Path
 
-import git.exc
 from tqdm import tqdm
 
 from global_var import deadline
@@ -18,10 +17,6 @@ for repo_prefix in tqdm(target_list):
     repo_name = repo_prefix.glob('*').__next__().stem
     repo_path = repo_prefix / repo_name
     repo = Repo(repo_path)
-    try:
-        repo.checkout_head_commit()
-    except git.exc.GitCommandError:
-        continue
 
     commit_hashes = repo.get_commit_hashes(until=deadline)
     result_dir = Path(f'../result/{this_file_name}')
