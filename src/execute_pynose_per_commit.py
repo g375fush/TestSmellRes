@@ -76,13 +76,13 @@ def main():
 
             try:
                 default_result_file_path.rename(result_file_path)
+                default_log_file_path.unlink()
             except FileNotFoundError:
                 print('PyNose did not output result file')
-
-            try:
-                default_log_file_path.rename(log_file_path)
-            except FileNotFoundError:
-                print('PyNose did not output log file')
+                try:
+                    default_log_file_path.rename(log_file_path)
+                except FileNotFoundError:
+                    print('PyNose did not output log file')
 
         if pynose_instance_path.exists():
             shutil.rmtree(pynose_instance_path)
