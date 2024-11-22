@@ -11,7 +11,7 @@ class PyNoseExecutor:
     本来はコマンドラインから操作しなければならないが，
     その操作を勝手に行ってくれるクラス．
     """
-    timeout = 3600
+    timeout = 300
 
     def __init__(self, runner_path: Path, result_dir: Path, repo_prefix: Path):
         """
