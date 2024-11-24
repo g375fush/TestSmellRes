@@ -129,7 +129,7 @@ def record_error_commit_hash(commit_hash: str, reason: str, path: Path):
     :param reason: エラーと判断した理由．
     :param path: 記録するファイルのパス．
     """
-    if path.stat().st_size == 0:
+    if not path.exists():
         error_dict = {}
     else:
         with path.open() as f:
@@ -147,6 +147,9 @@ def error_commit_hash(path: Path, commit_hash: str):
     :param path: エラーが記録されているファイルのパス．
     :param commit_hash: 判定するコミットハッシュ．
     """
+    if not path.exists():
+        return False
+
     with path.open() as f:
         errors = f.read()
     return True if commit_hash in errors else False
