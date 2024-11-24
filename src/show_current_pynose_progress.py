@@ -51,10 +51,11 @@ def get_errors(path: Path):
     存在しない場合は空文字を返す．
     :param path: エラーファイルが存在すれば格納されているディレクトリのパス．
     """
-    if not path.exists():
+    error_file_path = path.glob('*error*').__next__()
+    if not error_file_path.exists():
         return ''
 
-    with path.open() as f:
+    with error_file_path.open() as f:
         return f.read()
 
 
