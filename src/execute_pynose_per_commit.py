@@ -1,6 +1,7 @@
 """
 PyNose をコミットごとに実行するプログラム．
 """
+import json
 import shutil
 import sys
 import time
@@ -52,6 +53,7 @@ def main():
         commit_hashes = repo.get_commit_hashes(until=deadline)
         default_result_file_path = result_dir / f'{repo_name}.json'
         default_log_file_path = result_dir / 'log.txt'
+        error_recorded_file_path = result_dir / f'{repo_name}_error.json'
         for index, commit_hash in enumerate(commit_hashes, 1):
             result_file_name = f'{repo_name}_{index:06d}_{commit_hash}.json'
             log_file_name = f'{repo_name}_{index:06d}_{commit_hash}.txt'
@@ -62,6 +64,10 @@ def main():
                 print(f'skip {commit_hash}')
                 continue
 
+            if error_commit_hash(error_recorded_file_path, commit_hash):
+                print(f'skip {commit_hash} due to some error')
+                continue
+
             repo.checkout(commit_hash)
 
             try:
@@ -70,8 +76,10 @@ def main():
                 remove_pynose_dir(pynose_instance_path)
                 sys.exit(0)
             except TimeoutError:
+                record_error_commit_hash(commit_hash, 'Timeout',
+                                         error_recorded_file_path)
                 continue
-            else:
+            finally:
                 print(f'{repo_name} {index}/{len(commit_hashes)}')
 
             try:
@@ -79,6 +87,8 @@ def main():
                 default_log_file_path.unlink()
             except FileNotFoundError:
                 print('PyNose did not output result file')
+                record_error_commit_hash(commit_hash, 'OnlyLogFile',
+                                         error_recorded_file_path)
                 try:
                     default_log_file_path.rename(log_file_path)
                 except FileNotFoundError:
@@ -110,6 +120,36 @@ def remove_pynose_dir(dir_path: Path):
     except OSError:
         time.sleep(3)
         shutil.rmtree(dir_path)
+
+
+def record_error_commit_hash(commit_hash: str, reason: str, path: Path):
+    """
+    解析時にエラーとなったコミットハッシュを記録する．
+    :param commit_hash: コミットハッシュ．
+    :param reason: エラーと判断した理由．
+    :param path: 記録するファイルのパス．
+    """
+    if path.stat().st_size == 0:
+        error_dict = {}
+    else:
+        with path.open() as f:
+            error_dict = json.load(f)
+
+    error_dict[commit_hash] = reason
+    with path.open('w') as f:
+        json.dump(error_dict, f)
+
+
+def error_commit_hash(path: Path, commit_hash: str):
+    """
+    前回の解析でエラーと判断されたコミットハッシュ群に，
+    与えられたコミットハッシュが含まれているかを判定する．
+    :param path: エラーが記録されているファイルのパス．
+    :param commit_hash: 判定するコミットハッシュ．
+    """
+    with path.open() as f:
+        errors = f.read()
+    return True if commit_hash in errors else False
 
 
 if __name__ == '__main__':
