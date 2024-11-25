@@ -138,7 +138,7 @@ def record_error_commit_hash(commit_hash: str, reason: str, path: Path):
     error_dict[commit_hash] = reason
     with path.open('w') as f:
         json.dump(error_dict, f, indent=4)
-        json_file.write("\n")
+        f.write("\n")
 
 
 def error_commit_hash(path: Path, commit_hash: str):
