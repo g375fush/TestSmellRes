@@ -22,6 +22,6 @@ for repo_prefix in tqdm(target_list):
     result_dir = Path(f'../result/{this_file_name}')
     result_dir.mkdir(exist_ok=True)
     result_file_path = result_dir / f'{repo_name}.json'
-    with result_file_path.open('w', encoding='utf-8-sig') as f:
+    with result_file_path.open('w') as f:
         json.dump(commit_hashes, f, indent=4)
         f.write('\n')
