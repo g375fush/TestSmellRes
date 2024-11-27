@@ -17,6 +17,8 @@ for pynose_result_path in tqdm(pynose_result_paths):
     try:
         pynose_result_manager = PyNoseResultManager(pynose_result_path)
         pynose_result_manager.count_test_smells_per_file()
+    except KeyboardInterrupt:
+        break
     except: # noqa
         print(pynose_result_path.as_posix())
         pynose_result_path.unlink()
