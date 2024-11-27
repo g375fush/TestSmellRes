@@ -5,13 +5,15 @@ Ctrl + c などによってたまに PyNose の出力する json ファイルが
 """
 from pathlib import Path
 
+from tqdm import tqdm
+
 from pynose_result_manager import PyNoseResultManager
 
 
 result_root = Path('../result/execute_pynose_per_commit').resolve(strict=True)
 pynose_result_paths = result_root.rglob('*.json')
 
-for pynose_result_path in pynose_result_paths:
+for pynose_result_path in tqdm(pynose_result_paths):
     try:
         pynose_result_manager = PyNoseResultManager(pynose_result_path)
         pynose_result_manager.count_test_smells_per_file()
