@@ -25,9 +25,13 @@ def main():
                     for file_path in input_files]
 
     with ThreadPoolExecutor() as executor:
-        list(tqdm(executor.map(lambda files: compress_file(*files),
-                               zip(input_files, output_files)),
-                  total=len(input_files)))
+        with tqdm(total=len(input_files)) as pbar:
+            futures = [executor.submit(compress_file, input_file, output_file)
+                       for input_file, output_file
+                       in zip(input_files, output_files)]
+            for future in futures:
+                future.result()
+                pbar.update()
 
 
 def compress_file(src_file: Path, dst_file: Path):

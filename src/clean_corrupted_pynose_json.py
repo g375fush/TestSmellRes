@@ -17,12 +17,16 @@ def main():
     読み込みと加工ができないファイルを削除する．
     """
     result_root = Path('../result/execute_pynose_per_commit').resolve()
-    pynose_result_paths = [file_path for result_dir in result_root.iterdir()
-                           for file_path in result_dir.glob('*.json')]
+    file_paths = result_root.rglob('*.json')
+    file_cnt = sum(1 for _ in result_root.rglob('*.json'))
 
     with ThreadPoolExecutor() as executor:
-        list(tqdm(executor.map(clean_corrupted_file, pynose_result_paths),
-                  total=len(pynose_result_paths)))
+        with tqdm(total=file_cnt) as pbar:
+            futures = [executor.submit(clean_corrupted_file, file_path)
+                       for file_path in file_paths]
+            for future in futures:
+                future.result()
+                pbar.update()
 
 
 def clean_corrupted_file(file_path: Path):
