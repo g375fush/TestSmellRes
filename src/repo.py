@@ -14,6 +14,7 @@ class Repo:
     """
 
     def __init__(self, repo_path: Path):
+        self.repo_path = repo_path
         self._repo = git.Repo(repo_path.as_posix())
         self.branch_name = self._repo.branches[0] # noqa
 
