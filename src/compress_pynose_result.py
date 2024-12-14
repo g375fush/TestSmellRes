@@ -34,12 +34,12 @@ def make_result_dirs():
     """
     this_file_name = Path(__file__).stem
     result_root = Path('../result/').resolve() / this_file_name
-    result_root.mkdir()
+    result_root.mkdir(exist_ok=True)
     dir_names = [dir_path.name
                  for dir_path
                  in Path('../result/execute_pynose_per_commit').iterdir()]
     for dir_name in dir_names:
-        result_root.joinpath(dir_name).mkdir()
+        result_root.joinpath(dir_name).mkdir(exist_ok=True)
 
 
 def fast_rglob() -> tuple:
