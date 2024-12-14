@@ -23,7 +23,7 @@ class PyNoseExecutor:
         self.result_dir = result_dir
         self.repo_prefix = repo_prefix
 
-    def execute_pynose(self) -> None:
+    def execute_pynose(self, timeout=None) -> None:
         """
         PyNose を実行する．
 
@@ -35,6 +35,7 @@ class PyNoseExecutor:
 
         :return: None
         """
+        timeout = timeout or self.timeout
         cmd = [
             'python',
             self.runner_path,
@@ -43,7 +44,7 @@ class PyNoseExecutor:
         ]
 
         try:
-            run(cmd, check=True, timeout=self.timeout)
+            run(cmd, check=True, timeout=timeout)
         except subprocess.CalledProcessError:
             print('Failed to execute PyNose')
             raise
