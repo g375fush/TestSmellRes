@@ -18,14 +18,16 @@ def main():
     make_result_dirs()
 
     cpu_cnt = get_cpu_cnt()
-    max_threads = cpu_cnt * 10
+    max_threads = cpu_cnt * 2
 
-    file_paths, total = fast_rglob()
-
+    file_paths = fast_rglob()
+    chunk_size = 10000
     with ThreadPoolExecutor(max_threads) as executor:
-        with tqdm(total=total) as pbar:
-            for _ in executor.map(compress, file_paths):
-                pbar.update()
+        with tqdm(total=len(file_paths)) as pbar:
+            for i in range(0, len(file_paths), chunk_size):
+                chunk = file_paths[i:i+chunk_size]
+                for _ in executor.map(compress, chunk):
+                    pbar.update()
 
 
 def make_result_dirs():
@@ -42,22 +44,16 @@ def make_result_dirs():
         result_root.joinpath(dir_name).mkdir(exist_ok=True)
 
 
-def fast_rglob() -> tuple:
+def fast_rglob():
     """
-    pathlib の rglob は取得した総数を算出するスピードが遅いので自前で実装する．
+    pathlib の rglob はリスト化のスピードが遅いので自前で実装する．
     :return file_paths: 入力のファイルパス群．
-    :return total: tqdm に渡すための総数．
     """
     result_root = Path('../result/execute_pynose_per_commit').resolve()
-    file_paths = result_root.rglob('*.json')
-
     result_dirs = result_root.glob('*')
-    total = 0
-    for result_dir in result_dirs:
-        for _ in result_dir.glob('*.json'):
-            total += 1
-
-    return file_paths, total
+    file_paths = [file_path for result_dir in result_dirs
+                  for file_path in result_dir.glob('*.json')]
+    return file_paths
 
 
 def get_cpu_cnt():
