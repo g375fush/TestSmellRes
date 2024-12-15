@@ -3,7 +3,7 @@ PyNose の結果は約 2 TB存在するのでそれらを圧縮するプログ�
 """
 import json
 import os
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 
 from tqdm import tqdm
@@ -22,7 +22,7 @@ def main():
 
     file_paths = fast_rglob()
     chunk_size = 10000
-    with ThreadPoolExecutor(max_threads) as executor:
+    with ProcessPoolExecutor(max_threads) as executor:
         with tqdm(total=len(file_paths)) as pbar:
             for i in range(0, len(file_paths), chunk_size):
                 chunk = file_paths[i:i+chunk_size]
