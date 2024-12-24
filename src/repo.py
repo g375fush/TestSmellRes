@@ -17,7 +17,7 @@ class Repo:
         self.repo_path = repo_path
         self._repo = git.Repo(repo_path.as_posix())
         self.branch_name = self._repo.branches[0] # noqa
-        self.name = repo_path.name
+        self.name: str = repo_path.name
 
     def get_commit_hashes(self, until: Optional[datetime] = None) -> list:
         """
