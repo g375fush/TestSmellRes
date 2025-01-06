@@ -56,6 +56,8 @@ def mapping_per_commit(repo: Repo, result_dir: Path):
     for i, commit_hash in enumerate(tqdm(commit_hashes, leave=False), start=1):
         result_file = f'{repo.name}_{i:06d}_{commit_hash}.json'
         result_path = result_dir / result_file
+        if result_path.exists():
+            continue
         repo.checkout(commit_hash)
         result = mapping_per_file(repo)
         with result_path.open('w', encoding='utf-8') as f:

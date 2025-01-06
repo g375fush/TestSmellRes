@@ -18,12 +18,15 @@ def main():
 
     output_root = input_root.parent / Path(__file__).stem
     for input_file in tqdm(input_files):
+        output_file = output_root.joinpath(*input_file.parts[-2:])
+        if output_file.exists():
+            continue
+
         with input_file.open() as f:
             orig_dict = json.load(f)
 
         inverted_dict = invert(orig_dict)
 
-        output_file = output_root.joinpath(*input_file.parts[-2:])
         output_file.parent.mkdir(exist_ok=True, parents=True)
         with output_file.open('w', encoding='utf-8') as f:
             json.dump(inverted_dict, f, indent=4)
