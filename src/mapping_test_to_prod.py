@@ -5,6 +5,7 @@ unittest を読み込んでいる .py ファイルを読み込み，製品コー
 """
 import ast
 import json
+import sys
 from ast import NodeVisitor
 from pathlib import Path
 
@@ -19,6 +20,8 @@ def main():
     解析するリポジトリを決定し，
     リポジトリの各コミットごとに対応付けを行う．
     """
+    sys.setrecursionlimit(10000)  # ast 解析中の再帰制限対策
+
     start = input('start:').zfill(4)
     end = input('end:').zfill(4)
 
