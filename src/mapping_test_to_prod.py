@@ -101,6 +101,8 @@ def mapping(repo: Repo, python_file: Path):
         return None
     except ValueError:  # null byte が含まれている可能性がある．
         return None
+    except OSError:  # シンボリックが循環もしくは深すぎる可能性がある．
+        return None
 
     if not import_unittest(modules):
         return None
