@@ -73,11 +73,12 @@ def mapping_per_file(repo: Repo) -> dict:
     :param repo: リポジトリを操作するクラス．
     """
     result = {}
-    python_files = list(repo.repo_path.rglob('*.py'))
-    for python_file in tqdm(python_files, leave=False):
-        files = mapping(repo, python_file)
+    python_files = repo.repo_path.rglob('*.py')
+    test_files = [file for file in python_files if 'test' in file.stem]
+    for test_file in tqdm(test_files, leave=False):
+        files = mapping(repo, test_file)
         if files:
-            result[python_file.relative_to(repo.repo_path).as_posix()] = files
+            result[test_file.relative_to(repo.repo_path).as_posix()] = files
     return result
 
 
