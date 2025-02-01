@@ -58,3 +58,10 @@ class Repo:
             print('Failed to checkout')
             raise
         print(f'finish checkout {commit_hash}')
+
+    def get_clone_url(self) -> str:
+        """
+        clone 用の url を取得する．
+        :return: clone 用の url．
+        """
+        return self._repo.remotes.origin.url
