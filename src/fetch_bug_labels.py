@@ -27,6 +27,8 @@ def main():
 
     target_list = [repo_prefix.glob('*').__next__().resolve()
                    for repo_prefix in Path('../repo').glob('*')]
+    target_list.sort(key=lambda x: x.name)
+
     for target in target_list:
         result_file_path = result_dir / target.name / f'{target.name}.json'
         result_file_path.parent.mkdir(exist_ok=True)
