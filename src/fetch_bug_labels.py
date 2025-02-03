@@ -23,7 +23,7 @@ def main():
     result_dir.mkdir(exist_ok=True, parents=True)
 
     token = get_token()
-    header = make_header(token)
+    headers = make_headers(token)
 
     target_list = [repo_prefix.glob('*').__next__().resolve()
                    for repo_prefix in Path('../repo').glob('*')]
@@ -35,7 +35,7 @@ def main():
         if result_file_path.exists():
             continue
         api_url = make_api_url(Repo(target))
-        labels = fetch_labels(api_url, header)
+        labels = fetch_labels(api_url, headers)
         bug_labels = decide_labels(labels)
 
         with result_file_path.open('w') as f:
@@ -51,7 +51,7 @@ def get_token() -> str:
     return os.getenv("TOKEN")
 
 
-def make_header(token) -> dict:
+def make_headers(token) -> dict:
     """
     ヘッダーにトークンを埋め込む．
     :param token: アクセストークン．
@@ -74,14 +74,14 @@ def make_api_url(repo: Repo) -> str:
     return api_url
 
 
-def fetch_labels(api_url: str, header: dict) -> list:
+def fetch_labels(api_url: str, headers: dict) -> list:
     """
     api 経由で全てのラベルを取得する．
     """
     labels = []
     api_url += f'/labels?per_page=100'
     while api_url:
-        response = requests.get(api_url, headers=header)
+        response = requests.get(api_url, headers=headers)
         if response.status_code == 404:
             return []
         labels.extend(response.json())
@@ -108,8 +108,8 @@ def decide_labels(labels: list):
 def show_options(labels: list):
     """
     ラベルを番号付きで表示する.
-     nameを選択肢、descriptionを補助情報として表示する.
-     """
+    nameを選択肢、descriptionを補助情報として表示する.
+    """
     if not labels:
         print('no labels!')
         return
