@@ -7,6 +7,7 @@ from pathlib import Path
 
 import requests
 from dotenv import load_dotenv
+from tqdm import tqdm
 
 from repo import Repo
 
@@ -25,7 +26,7 @@ def main():
                    for repo_prefix in Path('../repo').glob('*')]
     target_list.sort(key=lambda x: x.name)
 
-    for target in target_list:
+    for target in tqdm(target_list):
         result_file_path = result_dir / target.name / f'{target.name}.json'
         result_file_path.parent.mkdir(exist_ok=True)
         if result_file_path.exists():
@@ -109,7 +110,7 @@ def get_bug_issue_numbers(issues: list, bug_labels: list) -> list:
     :return: バグに関するラベルが付与された issue の番号のリスト．
     """
     bug_issue_numbers = set()
-    for issue in issues:
+    for issue in tqdm(issues, leave=False):
         for label in issue['labels']:
             if label['name'] in bug_labels:
                 bug_issue_numbers.add(issue['number'])
