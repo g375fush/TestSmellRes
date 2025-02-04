@@ -1,5 +1,6 @@
 """
-GitHub Rest Api を用いてリポジトリの issues を json の形で取得するプログラム．
+GitHub Rest Api を用いてリポジトリの issues を取得し，
+そこからバグに関する issue の番号を取得する，
 """
 import json
 import os
@@ -14,7 +15,7 @@ from repo import Repo
 
 def main():
     """
-    対象のリポジトリごとに issues を取得する．
+    対象のリポジトリごとに issues を取得してバグに関する issue の番号を取得する．
     """
     result_dir = Path('../result') / Path(__file__).stem
     result_dir.mkdir(exist_ok=True, parents=True)
