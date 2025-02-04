@@ -29,17 +29,27 @@ def main():
                    for repo_prefix in Path('../repo').glob('*')]
     target_list.sort(key=lambda x: x.name)
 
+    aggregated = {}
+    aggregated_file_path = result_dir / 'aggregated.json'
     for target in target_list:
         result_file_path = result_dir / target.name / f'{target.name}.json'
         result_file_path.parent.mkdir(exist_ok=True)
         if result_file_path.exists():
+            with result_file_path.open() as f:
+                aggregated[target.name] = json.load(f)
             continue
+
         api_url = make_api_url(Repo(target))
         labels = fetch_labels(api_url, headers)
         bug_labels = decide_labels(labels)
 
         with result_file_path.open('w') as f:
             json.dump(bug_labels, f)
+
+        aggregated[target.name] = bug_labels
+
+    with aggregated_file_path.open('w') as f:
+        json.dump(aggregated, f, indent=4)
 
 
 def get_token() -> str:
