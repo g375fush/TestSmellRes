@@ -65,3 +65,32 @@ class Repo:
         :return: clone 用の url．
         """
         return self._repo.remotes.origin.url
+
+    def get_parents(self, commit_hash: str) -> list:
+        """
+        与えられたコミットハッシュの親が 2 つであるかを判定する．
+        """
+        commit = self._repo.commit(commit_hash)
+        return list(commit.parents)
+
+    def get_base_commit_hash(self, commit_hash: str) -> Optional[str]:
+        """
+        マージコミットの親同士の共通祖先のコミットハッシュを返す.
+        マージコミットでない場合や見つからなかった場合は None を返す.
+        ベースコミットがメインブランチに存在しない場合も None を返す．
+        """
+        merge_commit = self._repo.commit(commit_hash)
+        base_commit = self._repo.merge_base(*merge_commit.parents)
+        return base_commit[0].hexsha if base_commit else None
+
+    def get_changed_files(self, commit_hash: str) -> list:
+        """
+        そのコミットで変更のあったファイルを取得する．
+        """
+        changed_files = []
+        option = ['-m', '--pretty=format:', '--name-only']
+        git_output = self._repo.git.show(*option, commit_hash)
+        for file_path in git_output.splitlines():
+            if file_path:
+                changed_files.append(file_path)
+        return changed_files
