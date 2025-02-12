@@ -24,7 +24,6 @@ def main():
                    for repo_prefix in Path('../repo').glob('*')]
     target_list.sort(key=lambda x: x.name)
 
-    target_list = target_list[:10]
     aggregated = {}
     aggregated_file_path = result_dir / 'aggregated.json'
     for target in tqdm(target_list):
@@ -43,7 +42,8 @@ def main():
         mapping_dict = get_mapping_dict(target.name)
         filter_prod_path(repo, mapping_dict)
 
-        for prod_path, test_files in list(mapping_dict.items()):
+        for prod_path, test_files in tqdm(list(mapping_dict.items()),
+                                          leave=False):
             pynose_result, test_files \
                 = get_pynose_result_for_product(repo_name, prod_path,
                                                 mapping_dict, test_files)
