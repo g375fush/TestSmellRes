@@ -4,10 +4,14 @@
 """
 import json
 from pathlib import Path
+from radon.complexity import cc_visit
+from radon.raw import analyze
+from radon.metrics import h_visit, mi_visit
 from typing import Optional
 
 from tqdm import tqdm
 
+from global_var import deadline
 from repo import Repo
 
 
@@ -26,6 +30,7 @@ def main():
 
     aggregated = {}
     aggregated_file_path = result_dir / 'aggregated.json'
+    target_list = target_list[:10]
     for target in tqdm(target_list):
         result = {}
         repo = Repo(target)
@@ -44,15 +49,30 @@ def main():
 
         for prod_path, test_files in tqdm(list(mapping_dict.items()),
                                           leave=False):
-            pynose_result, test_files \
+            pynose_result, test_files, bug_detected_commit \
                 = get_pynose_result_for_product(repo_name, prod_path,
                                                 mapping_dict, test_files)
             if not pynose_result:
                 continue
 
-            # 製品コード，テストコードそれぞれのメトリクスを取得する．
+            if bug_detected_commit:
+                bug = 1
+                repo.checkout(bug_detected_commit)
+            else:
+                bug = 0
+                commit_hashes = repo.get_commit_hashes(until=deadline)
+                repo.checkout(commit_hashes[-1])
 
-            store_result(result, prod_path, test_files, pynose_result)
+            prod_metrics = get_prod_metrics(repo.repo_path / prod_path)
+            test_metrics = get_test_metrics(repo.repo_path, test_files)
+
+            if prod_metrics is None:
+                continue
+            if test_metrics is None:
+                continue
+
+            store_result(result, prod_path, prod_metrics,
+                         test_files, test_metrics, pynose_result, bug)
 
         with result_file_path.open('w') as f:
             json.dump(result, f, indent=4)
@@ -124,7 +144,7 @@ def filter_prod_path(repo: Repo, mapping_dict: dict):
     :param repo: リポジトリを操作するクラス．
     :param mapping_dict: 製品コードの辞書．
     """
-    for prod_path, _ in list(mapping_dict.items()):
+    for prod_path, _ in tqdm(list(mapping_dict.items()), leave=False):
         if prod_path.name == '__init__.py':
             del mapping_dict[prod_path]
             continue
@@ -156,7 +176,7 @@ def get_pynose_result_for_product(repo_name: str, prod_path: Path,
     else:
         pynose_result = get_latest_pynose_result(prod_path, repo_name,
                                                  mapping_dict, test_files)
-    return pynose_result, test_files
+    return pynose_result, test_files, bug_detected_commit
 
 
 def has_bug_history(repo_name: str, prod_path: Path) -> Optional[str]:
@@ -250,18 +270,139 @@ def get_latest_pynose_result(prod_path: Path,
         del mapping_dict[prod_path]
 
 
-def store_result(result: dict, prod_path: Path,
-                 test_files: list, pynose_result: dict):
+def get_prod_metrics(prod_path: Path) -> Optional[dict]:
+    """
+    製品コードのメトリクスを取得する．
+    :param prod_path: ファイルへのパス．
+    """
+    return get_metrics(prod_path)
+
+
+def get_test_metrics(repo_path: Path, test_files: list[Path]) -> Optional[dict]:
+    """
+    製品コードのメトリクスを取得する．
+    :param repo_path: リポジトリへのパス．
+    :param test_files: テストファイルのリスト．
+    """
+    result = {}
+    tmp = []
+    for test_file in test_files:
+        test_file_path = repo_path / test_file
+        metrics = get_metrics(test_file_path)
+        if metrics is not None:
+            tmp.append(metrics)
+
+    if not tmp:
+        return None
+
+    keys = tmp[0].keys()
+
+    for key in keys:
+        values = [metric[key] for metric in tmp]
+        if key == "cc_max":
+            result[key] = max(values)
+        else:
+            result[key] = ave(values)
+
+    return result
+
+
+def ave(num_list: list):
+    """
+    数値の平均を返す．
+    :param num_list: 数値のリスト．
+    """
+    return sum(num_list) / len(num_list)
+
+
+def get_metrics(file_path: Path) -> Optional[dict]:
+    """
+    コードのメトリクスを取得する，
+    :param file_path: ファイルへのパス．
+    """
+    assert file_path.exists()
+
+    metrics = {}
+    try:
+        with file_path.open(encoding='utf-8-sig') as file:
+            code = file.read()
+    except Exception as e:  # noqa
+        print(e)
+        return None
+
+    try:
+        raw_metrics = analyze(code)
+        metrics['loc'] = raw_metrics.loc
+        metrics['lloc'] = raw_metrics.lloc
+        metrics['sloc'] = raw_metrics.sloc
+        metrics['comments'] = raw_metrics.comments
+        metrics['blanks'] = raw_metrics.blank
+    except Exception as e:  # noqa
+        print(e)
+        return None
+
+    try:
+        cc_blocks = cc_visit(code)
+        if cc_blocks:
+            cc_values = [block.complexity for block in cc_blocks]
+            metrics['cc_avg'] = sum(cc_values) / len(cc_values)
+            metrics['cc_max'] = max(cc_values)
+        else:
+            metrics['cc_avg'] = 0.0
+            metrics['cc_max'] = 0.0
+    except SyntaxError:
+        print(f"Syntax error in file: {file_path}")
+        return None
+
+    metrics['def_count'] = sum(1 for line in code.splitlines()
+                               if line.strip().startswith('def '))
+    metrics['class_count'] = sum(1 for line in code.splitlines()
+                                 if line.strip().startswith('class '))
+
+    try:
+        metrics['maintainability_index'] = mi_visit(code, multi=True)
+        metrics['mi_raw'] = mi_visit(code, multi=False)
+    except Exception as e:  # noqa
+        print(e)
+        return None
+
+    try:
+        halstead_metrics = h_visit(code)
+        metrics['h1'] = halstead_metrics.total.h1
+        metrics['h2'] = halstead_metrics.total.h2
+        metrics['n1'] = halstead_metrics.total.N1
+        metrics['n2'] = halstead_metrics.total.N2
+        metrics['v'] = halstead_metrics.total.volume
+        metrics['d'] = halstead_metrics.total.difficulty
+        metrics['e'] = halstead_metrics.total.effort
+        metrics['b'] = halstead_metrics.total.bugs
+        metrics['t'] = halstead_metrics.total.time
+    except Exception as e: # noqa
+        print(e)
+        return None
+
+    return metrics
+
+
+def store_result(result: dict, prod_path: Path, prod_metrics: dict,
+                 test_files: list, test_metrics: dict,
+                 pynose_result: dict, bug: int):
     """
     結果を格納する．
     :param result: 結果を格納する辞書．
     :param prod_path: 製品コードのパス．
+    :param prod_metrics: 製品コードのメトリクス．
     :param test_files: 製品コードをテストするテストファイル群のパス．
+    :param test_metrics: テストコードのメトリクス．
     :param pynose_result: pynose の結果．
+    :param bug: バグと判定されたかどうか．
     """
-    result[prod_path.as_posix()] = {'test_files': [test_file.as_posix()
+    result[prod_path.as_posix()] = {'prod_metrics': prod_metrics,
+                                    'test_files': [test_file.as_posix()
                                                    for test_file in test_files],
-                                    'pynose_result': pynose_result}
+                                    'test_metrics': test_metrics,
+                                    'pynose_result': pynose_result,
+                                    'bug': bug}
 
 
 if __name__ == '__main__':
