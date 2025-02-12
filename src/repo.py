@@ -94,3 +94,12 @@ class Repo:
             if file_path:
                 changed_files.append(file_path)
         return changed_files
+
+    def get_changed_times(self, file_path: Path):
+        """
+        与えられた file_path が何回変更されたかを返す．
+        :param file_path: 対象のファイルパス．
+        """
+        options = ['--follow', '--pretty=format:%H', '--']
+        commit_hashes = self._repo.git.log(*options, file_path).splitlines()
+        return len(commit_hashes)
