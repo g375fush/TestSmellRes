@@ -30,7 +30,6 @@ def main():
 
     aggregated = {}
     aggregated_file_path = result_dir / 'aggregated.json'
-    target_list = target_list[:10]
     for target in tqdm(target_list):
         result = {}
         repo = Repo(target)
