@@ -46,7 +46,8 @@ def predict_using_test_smell(data_for_prediction: dict):
     X, y = shuffle_data(X, y) # noqa
     model = RandomForestClassifier(random_state=42)
     mean_fpr, mean_tpr, mean_auc, std_auc = predict(model, X, y)
-    plot_roc_curve(mean_fpr, mean_tpr, mean_auc, std_auc)
+    plot_roc_curve(mean_fpr, mean_tpr, mean_auc, std_auc,
+                   '../result/bug_predict/roc_ts.pdf')
 
 
 def predict_using_prod_metrics(data_for_prediction: dict):
@@ -58,7 +59,8 @@ def predict_using_prod_metrics(data_for_prediction: dict):
     X, y = shuffle_data(X, y) # noqa
     model = RandomForestClassifier(random_state=42)
     mean_fpr, mean_tpr, mean_auc, std_auc = predict(model, X, y)
-    plot_roc_curve(mean_fpr, mean_tpr, mean_auc, std_auc)
+    plot_roc_curve(mean_fpr, mean_tpr, mean_auc, std_auc,
+                   '../result/bug_predict/roc_prod.pdf')
 
 
 def predict_using_test_metrics(data_for_prediction: dict):
@@ -70,7 +72,8 @@ def predict_using_test_metrics(data_for_prediction: dict):
     X, y = shuffle_data(X, y) # noqa
     model = RandomForestClassifier(random_state=42)
     mean_fpr, mean_tpr, mean_auc, std_auc = predict(model, X, y)
-    plot_roc_curve(mean_fpr, mean_tpr, mean_auc, std_auc)
+    plot_roc_curve(mean_fpr, mean_tpr, mean_auc, std_auc,
+                   '../result/bug_predict/roc_test.pdf')
 
 
 def get_bug_data(data_for_prediction) -> list:
@@ -154,24 +157,30 @@ def predict(model, X, y): # noqa
     return mean_fpr, mean_tpr, mean_auc, std_auc
 
 
-def plot_roc_curve(mean_fpr, mean_tpr, mean_auc, std_auc):
+def plot_roc_curve(mean_fpr, mean_tpr, mean_auc, std_auc, save_name):
     """
     計算済みのROC曲線データを用いてプロットを行う．
     :param mean_fpr: 平均False Positive Rate (numpy array)
     :param mean_tpr: 平均True Positive Rate (numpy array)
     :param mean_auc: 平均AUC値 (float)
     :param std_auc: AUC値の標準偏差 (float)
+    :param save_name: データを保存する名前．
     """
     plt.plot([0, 1], [0, 1], linestyle='--', lw=2, color='k', alpha=.8)
     plt.plot(mean_fpr, mean_tpr, linestyle='-', lw=2, color='k',
              label=r'Mean ROC (AUC = %0.2f $\pm$ %0.2f)' % (mean_auc, std_auc))
     plt.xlim([0.0, 1.0])
     plt.ylim([0.0, 1.05])
-    plt.xlabel('False Positive Rate', fontsize=14)
-    plt.ylabel('True Positive Rate', fontsize=14)
-    plt.xticks(fontsize=12)
-    plt.yticks(fontsize=12)
-    plt.legend(loc="lower right")
+    plt.xlabel('False Positive Rate', fontsize=16)
+    plt.ylabel('True Positive Rate', fontsize=16)
+    plt.xticks(fontsize=14)
+    plt.yticks(fontsize=14)
+    plt.legend(loc="lower right", fontsize=12)
+
+    save_dir = Path(save_name).parent
+    save_dir.mkdir(exist_ok=True)
+    plt.savefig(save_name)
+
     plt.show()
 
 
