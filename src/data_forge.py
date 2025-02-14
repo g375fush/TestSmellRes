@@ -125,7 +125,7 @@ def get_test_files(repo_name: str, bug_detected_commit: str,
             mapping_result = json.load(f)
         test_files = [Path(test_file)
                       for test_file in mapping_result[prod_path.as_posix()]]
-        return test_files
+        return list(set(test_files))
     except AttributeError:
         del mapping_dict[prod_path]
         return []
@@ -173,6 +173,7 @@ def get_pynose_result_for_product(repo_name: str, prod_path: Path,
         pynose_result = get_pynose_result(prod_path, bug_detected_commit,
                                           repo_name, mapping_dict, test_files)
     else:
+        test_files = list(set(test_files))
         pynose_result = get_latest_pynose_result(prod_path, repo_name,
                                                  mapping_dict, test_files)
     return pynose_result, test_files, bug_detected_commit
